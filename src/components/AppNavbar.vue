@@ -25,7 +25,7 @@
     <v-container class="nav-container elevation-4 rounded-xl d-flex align-center px-2 px-md-4 flex-nowrap">
       
       <div class="logo-wrapper cursor-pointer flex-shrink-0" @click="$router.push('/')">
-        <v-img src="/src/assets/images/logo.png" width="55" contain></v-img>
+        <v-img src="/images/logo.png" width="55" contain></v-img>
       </div>
 
       <v-spacer></v-spacer>

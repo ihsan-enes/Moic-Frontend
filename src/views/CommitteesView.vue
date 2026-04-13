@@ -17,7 +17,7 @@
             <v-row justify="center" class="ga-y-4">
                 <v-col cols="12" sm="6" md="4" lg="3">
                     <v-card class="committee-card rounded-lg" height="320">
-                        <v-img src="/src/assets/images/committee-1.jpg" cover class="fill-height align-center text-center">
+                        <v-img src="/images/committee-1.jpg" cover class="fill-height align-center text-center">
                             <div class="card-overlay"></div>
                         </v-img>
                     </v-card>
@@ -25,16 +25,7 @@
 
                 <v-col cols="12" sm="6" md="4" lg="3">
                     <v-card class="committee-card rounded-lg" height="320">
-                        <v-img src="/src/assets/images/committee-2.jpg" cover class="fill-height align-center text-center">
-                            <div class="card-overlay"></div>
-                            
-                        </v-img>
-                    </v-card>
-                </v-col>
-
-                <v-col cols="12" sm="6" md="4" lg="3">
-                    <v-card class="committee-card rounded-lg" height="320">
-                        <v-img src="/src/assets/images/committee-3.jpg" cover class="fill-height align-center text-center">
+                        <v-img src="/images/committee-2.jpg" cover class="fill-height align-center text-center">
                             <div class="card-overlay"></div>
                             
                         </v-img>
@@ -43,7 +34,7 @@
 
                 <v-col cols="12" sm="6" md="4" lg="3">
                     <v-card class="committee-card rounded-lg" height="320">
-                        <v-img src="/src/assets/images/committee-4.jpg" cover class="fill-height align-center text-center">
+                        <v-img src="/images/committee-3.jpg" cover class="fill-height align-center text-center">
                             <div class="card-overlay"></div>
                             
                         </v-img>
@@ -52,7 +43,16 @@
 
                 <v-col cols="12" sm="6" md="4" lg="3">
                     <v-card class="committee-card rounded-lg" height="320">
-                        <v-img src="/src/assets/images/committee-5.jpg" cover class="fill-height align-center text-center">
+                        <v-img src="/images/committee-4.jpg" cover class="fill-height align-center text-center">
+                            <div class="card-overlay"></div>
+                            
+                        </v-img>
+                    </v-card>
+                </v-col>
+
+                <v-col cols="12" sm="6" md="4" lg="3">
+                    <v-card class="committee-card rounded-lg" height="320">
+                        <v-img src="/images/committee-5.jpg" cover class="fill-height align-center text-center">
                             <div class="card-overlay"></div>
                             
                         </v-img>

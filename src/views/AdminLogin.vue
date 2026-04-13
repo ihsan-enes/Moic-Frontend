@@ -4,7 +4,7 @@
             <v-col cols="12" sm="8" md="4" lg="3">
 
                 <div class="text-center mb-8">
-                    <v-img src="/src/assets/images/logo.png" width="90" class="mx-auto mb-4" contain></v-img>
+                    <v-img src="/images/logo.png" width="90" class="mx-auto mb-4" contain></v-img>
                     <v-btn to="/" variant="text" color="white" prepend-icon="mdi-arrow-left"
                         class="text-none opacity-60">
                         Siteye Geri Dön

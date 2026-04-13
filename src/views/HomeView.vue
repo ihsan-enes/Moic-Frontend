@@ -1,7 +1,7 @@
 <template>
   <AppNavbarHome />
   <v-img
-    src="/src/assets/images/school.png"
+    src="/images/school.png"
     height="100vh"
     cover
     class="align-center"
@@ -42,7 +42,7 @@
     <v-card class="info-card mb-10 rounded-xl elevation-2 mx-auto" max-width="900"> <v-row no-gutters>
         <v-col cols="12" md="5" class="pa-0 d-flex align-center justify-center w-100 bg-white">
           <v-img 
-            src="/src/assets/images/OİC.jpg" 
+            src="/images/OİC.jpg" 
             width="100%" 
             max-width="260"
             min-height="260" 

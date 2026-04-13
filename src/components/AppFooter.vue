@@ -3,7 +3,7 @@
     <v-container>
       <v-row>
         <v-col cols="12" md="4" class="pr-md-10">
-          <v-img src="/src/assets/images/logo.png" max-width="60" class="mb-4"></v-img>
+          <v-img src="/images/logo.png" max-width="60" class="mb-4"></v-img>
           <h3 class="footer-title mb-4">{{ $t('footer.title') }}</h3>
           <p class="text-body-2 opacity-70 line-height-relaxed" style="font-size: x-small;">
             {{ $t('footer.description') }}

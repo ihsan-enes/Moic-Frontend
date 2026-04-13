@@ -36,7 +36,7 @@
 
   <v-app-bar flat class="admin-app-bar px-md-10" height="70">
     <div class="d-flex align-center cursor-pointer" @click="$router.push('/')">
-      <v-img src="/src/assets/images/logo.png" width="45" contain class="mr-3"></v-img>
+      <v-img src="/images/logo.png" width="45" contain class="mr-3"></v-img>
       <div class="admin-logo-text hidden-xs">TR MOIC <span class="gold-text ml-1">PANEL</span></div>
     </div>
 

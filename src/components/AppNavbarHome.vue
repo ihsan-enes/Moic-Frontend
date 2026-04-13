@@ -25,7 +25,7 @@
   </v-navigation-drawer>
 
   <v-app-bar flat color="transparent" absolute dark class="px-md-10 mt-2" style="overflow: visible">
-    <v-img src="/src/assets/images/logo.png" max-width="80" max-height="80" class="mr-3 cursor-pointer"
+    <v-img src="/images/logo.png" max-width="80" max-height="80" class="mr-3 cursor-pointer"
       @click="$router.push('/')"></v-img>
     <v-spacer></v-spacer>
 
