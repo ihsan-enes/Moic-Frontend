@@ -111,9 +111,7 @@
                             </v-col>
                         </v-row>
 
-                        <p class="text-caption opacity-50 mb-5" style="font-size: 0.7rem !important;">
-                            {{ $t("iletisim.form.disclaimer") }}
-                        </p>
+                        
 
                         <v-btn
                             :loading="loading"

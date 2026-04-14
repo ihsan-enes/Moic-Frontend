@@ -1,4 +1,218 @@
 <template>
+  <AppNavbar />
+  <v-container class="page-container py-15 mt-10">
+    <div class="page">
+      <header class="header">
+        <span class="overline">{{ $t("apply.overline") }}</span>
+        <h1 class="main-title" v-html="$t('apply.title')"></h1>
+        <p class="subtitle">{{ $t("apply.subtitle") }}</p>
+      </header>
+
+      <div class="divider">
+        <div class="divider-icon"></div>
+      </div>
+
+      <div class="rules-header text-center">
+        <div class="rules-label">{{ $t("apply.rules_reminder_title") }}</div>
+        <h2 class="rules-title">{{ $t("apply.rules_reminder_title") }}</h2>
+      </div>
+
+      <div class="rules-grid" :dir="$i18n.locale === 'ar' ? 'rtl' : 'ltr'">
+        <div>
+          <h3 class="rules-col-title">{{ $t("apply.cat1_title") }}</h3>
+          <ul class="rule-list">
+            <li v-for="(item, index) in $tm('apply.cat1_items')" :key="index">
+              {{ item }}
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="rules-col-title">{{ $t("apply.cat2_title") }}</h3>
+          <ul class="rule-list">
+            <li v-for="(item, index) in $tm('apply.cat2_items')" :key="index">
+              {{ item }}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cta-section">
+        <div class="ornament ornament-tl"></div>
+        <div class="ornament ornament-tr"></div>
+        <div class="ornament ornament-bl"></div>
+        <div class="ornament ornament-br"></div>
+
+        <span class="cta-eyebrow">{{ $t("apply.cta_title") }}</span>
+        <h3 class="cta-title">{{ $t("apply.cta_title") }}</h3>
+        <p class="cta-desc">{{ $t("apply.cta_desc") }}</p>
+
+        <v-btn
+          href="https://forms.gle/gPyZuQ8oRffLGbsh7"
+          target="_blank"
+          variant="outlined"
+          class="apply-btn"
+          height="60"
+        >
+          <svg class="btn-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 8h12M9 4l5 4-5 4" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span>{{ $t("apply.button_text") }}</span>
+        </v-btn>
+      </div>
+    </div>
+  </v-container>
+  <AppFooter />
+</template>
+
+<script>
+import AppFooter from '@/components/AppFooter.vue';
+import AppNavbar from '@/components/AppNavbar.vue';
+
+
+export default{
+    name:'application',
+    components:{
+        AppNavbar,
+        AppFooter
+    }
+}
+
+</script>
+
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
+
+.page-container {
+  background-color: #faf9f7; /* Hafif bir kağıt tonu */
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Jost', sans-serif;
+}
+
+/* ── Header ── */
+.header { text-align: center; margin-bottom: 70px; }
+
+.overline {
+  font-size: 13px; /* 10'dan 13'e çekildi */
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #b8922a;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.main-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 6vw, 4.2rem);
+  font-weight: 300;
+  color: #0f0e0c;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.main-title :deep(em) {
+  font-style: italic;
+  color: #b8922a;
+}
+
+.subtitle {
+  font-size: 17px; /* 14'ten 17'ye çekildi */
+  font-weight: 300;
+  color: #6a6660;
+  line-height: 1.8;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+/* ── Divider ── */
+.divider { display: flex; align-items: center; gap: 20px; margin: 60px 0; }
+.divider::before, .divider::after {
+  content: ''; flex: 1; height: 1px;
+  background: linear-gradient(to right, transparent, #c9a84c 50%, transparent);
+}
+.divider-icon { width: 8px; height: 8px; background: #c9a84c; transform: rotate(45deg); }
+
+/* ── Rules ── */
+.rules-label {
+  font-size: 12px; /* 9'dan 12'ye çekildi */
+  letter-spacing: 5px;
+  color: #b8922a;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.rules-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; text-align: left; }
+@media (max-width: 768px) { .rules-grid { grid-template-columns: 1fr; } }
+
+.rules-col-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(184, 146, 42, 0.2);
+  margin-bottom: 20px;
+}
+
+.rule-list li {
+  font-size: 15px; /* 13'ten 15'e çekildi */
+  color: #4a4640;
+  padding: 10px 0;
+  display: flex;
+  gap: 15px;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+
+.rule-list li::before { content: '—'; color: #b8922a; }
+
+/* ── CTA ── */
+.cta-section { text-align: center; padding: 80px 20px; }
+.cta-eyebrow { font-size: 12px; letter-spacing: 4px; color: #b8922a; margin-bottom: 15px; display: block; }
+.cta-title { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; margin-bottom: 15px; }
+.cta-desc { font-size: 16px; color: #7a7670; max-width: 450px; margin: 0 auto 40px; }
+
+.apply-btn {
+  letter-spacing: 3px;
+  font-size: 13px !important;
+  border: 1px solid #b8922a !important;
+  color: #b8922a !important;
+  transition: all 0.4s ease;
+}
+
+.apply-btn:hover {
+  background-color: #b8922a !important;
+  color: white !important;
+}
+
+.btn-icon { width: 18px; height: 18px; margin-right: 10px; }
+
+/* RTL Desteği */
+[dir="rtl"] .rules-grid { text-align: right; }
+[dir="rtl"] .rule-list li { flex-direction: row; }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <template>
     <AppNavbar />
 
     <v-container class="py-15 mt-15 bg-light-cream">
@@ -291,4 +505,4 @@ export default {
     padding-bottom: 8px !important;
     font-size: 0.85rem !important;
 }
-</style>
+</style> -->

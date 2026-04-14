@@ -13,10 +13,10 @@
         <v-col cols="12" sm="4" md="2">
           <h4 class="column-title mb-6">{{ $t('footer.quick_links') }}</h4>
           <ul class="footer-list">
-            <li><a href="#">{{ $t('navbar.about') }}</a></li>
-            <li><a href="#">{{ $t('navbar.committees') }}</a></li>
-            <li><a href="#">{{ $t('navbar.apply') }}</a></li>
-            <li><a href="#">{{ $t('navbar.contact') }}</a></li>
+            <li><a href="/">{{ $t('navbar.about') }}</a></li>
+            <li><a href="/committees">{{ $t('navbar.committees') }}</a></li>
+            <li><a href="/application">{{ $t('navbar.apply') }}</a></li>
+            <li><a href="/contact">{{ $t('navbar.contact') }}</a></li>
           </ul>
         </v-col>
 
@@ -24,7 +24,7 @@
           <h4 class="column-title mb-6">{{ $t('footer.contact') }}</h4>
           <div class="contact-item mb-3">
             <v-icon color="#d4af37" start size="18">mdi-email-outline</v-icon>
-            <span class="text-body-2">info@trmoic.org</span>
+            <span class="text-body-2">fsmmoic@gmail.com</span>
           </div>
           <div class="contact-item mb-3">
             <v-icon color="#d4af37" start size="18">mdi-map-marker-outline</v-icon>

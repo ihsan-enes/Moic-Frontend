@@ -1,8 +1,8 @@
 export default {
   welcome: 'Hoş Geldiniz',
   giris: {
-    first: "ULUSLARARASI FATİH SULTAN MEHMET ANADOLU İMAM HATİP LİSESİ'NİN İLK MOIC OTURUMU",
-    second: "ULUSLARARASI FATİH SULTAN MEHMET ANADOLU İMAM HATİP LİSESİ'NİN İLK ULUSAL MODEL OIC KONFERANSI",
+    first: "ULUSLARARASI FATİH SULTAN MEHMET ANADOLU İMAM HATİP LİSESİ'NİN İLK ULUSAL MODEL OIC KONFERANSI",
+    second: "Türkiye İmam Hatip Liseleri Ulusal MOIC Zirvesi",
     third: "Uluslararası Fatih Sultan Mehmet Anadolu İmam Hatip Lisesi",
     fourth: "Tanıtım Videosu",
     fifth: "Diplomasi, hitabet ve liderlik; seçkin bir akademik konferans atmosferinde bir araya geliyor."
@@ -254,6 +254,27 @@ export default {
     subtitle: "TR MOIC organizasyonunda görev alan ekip üyeleri aşağıda yer almaktadır.",
     loading: "Ekip yükleniyor...",
     error: "Ekip bilgileri şu an alınamıyor."
-  }
+  },
+  apply: {
+  overline: "TR MOIC / 2026",
+  title: "BAŞVURU <em>SÜRECİ</em>",
+  subtitle: "Konferansımıza katılmak için lütfen aşağıdaki temel kuralları inceleyiniz ve ardından başvuru formuna ilerleyiniz.",
+  rules_reminder_title: "Önemli Kurallar & Hatırlatmalar",
+  cat1_title: "Genel Davranış Kuralları",
+  cat1_items: [
+    "Tüm katılımcılar saygılı ve yapıcı bir iletişim dili kullanmalıdır.",
+    "Hakaret, küçümseme veya ayrımcılık içeren davranışlar kabul edilmez.",
+    "Konferans ortamında disiplinli ve sorumluluk sahibi davranılmalıdır."
+  ],
+  cat2_title: "Komite Kuralları",
+  cat2_items: [
+    "Delegeler yalnızca temsil ettikleri ülke adına konuşmalıdır.",
+    "Komite başkanlarının yönlendirmelerine uyulması zorunludur.",
+    "Oturum düzenini bozacak davranışlardan kaçınılmalıdır."
+  ],
+  cta_title: "Başvuruya Hazır mısınız?",
+  cta_desc: "Aşağıdaki butona tıkladığınızda başvuru yapacağınız Google Form sayfasına yönlendirileceksiniz.",
+  button_text: "BAŞVURU FORMUNU AÇ"
+}
 
 }

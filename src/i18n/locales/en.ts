@@ -1,8 +1,8 @@
 export default {
   welcome: "Welcome",
   giris: {
-    first: "THE FIRST MOIC SESSION OF ULUSLARARASI FATİH SULTAN MEHMET ANADOLU İMAM HATİP HIGH SCHOOL",
-    second: "The First National Model OIC Conference of International Fatih Sultan Mehmet Anatolian Imam Hatip High School",
+    first: "The 1st National Model OIC Conference of International Fatih Sultan Mehmet Anatolian Imam Hatip High School",
+    second: "Imam Hatip Türkiye Natoinal MOIC Highschool Summit",
     third: "Uluslararası Fatih Sultan Mehmet Anadolu İmam Hatip High School",
     fourth: "Introductory Video",
     fifth: "Diplomacy, oratory and leadership; come together in a distinguished academic conference atmosphere.",
@@ -249,6 +249,27 @@ export default {
     subtitle: "The team members serving in the TR MOIC organization are listed below.",
     loading: "Loading team members...",
     error: "Unable to load team information at the moment."
-  }
+  },
+  apply: {
+  overline: "TR MOIC / 2026",
+  title: "APPLICATION <em>PROCESS</em>",
+  subtitle: "To participate in our conference, please review the basic rules below and then proceed to the application form.",
+  rules_reminder_title: "Important Rules & Reminders",
+  cat1_title: "General Code of Conduct",
+  cat1_items: [
+    "All participants must use respectful and constructive language.",
+    "Behaviors involving insults or discrimination are not accepted.",
+    "Discipline and responsibility must be maintained at all times."
+  ],
+  cat2_title: "Committee Rules",
+  cat2_items: [
+    "Delegates must only speak on behalf of the country they represent.",
+    "Compliance with committee chairs' instructions is mandatory.",
+    "Behaviors that disrupt the session order must be avoided."
+  ],
+  cta_title: "Ready to Apply?",
+  cta_desc: "By clicking the button below, you will be redirected to the Google Form application page.",
+  button_text: "OPEN APPLICATION FORM"
+}
 
 };
