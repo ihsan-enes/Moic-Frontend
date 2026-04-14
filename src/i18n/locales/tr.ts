@@ -2,7 +2,7 @@ export default {
   welcome: 'Hoş Geldiniz',
   giris: {
     first: "ULUSLARARASI FATİH SULTAN MEHMET ANADOLU İMAM HATİP LİSESİ'NİN İLK MOIC OTURUMU",
-    second: "IMAM HATİP TÜRKİYE NATIONAL MOIC HIGHSCHOOL SUMMIT",
+    second: "ULUSLARARASI FATİH SULTAN MEHMET ANADOLU İMAM HATİP LİSESİ'NİN İLK ULUSAL MODEL OIC KONFERANSI",
     third: "Uluslararası Fatih Sultan Mehmet Anadolu İmam Hatip Lisesi",
     fourth: "Tanıtım Videosu",
     fifth: "Diplomasi, hitabet ve liderlik; seçkin bir akademik konferans atmosferinde bir araya geliyor."
@@ -36,7 +36,10 @@ export default {
     contact: "İLETİŞİM",
     social: "SOSYAL MEDYA",
     copyright: "© 2026 TR MOIC. Tüm hakları saklıdır.",
-    address: "İstanbul, Türkiye"
+    instagram: "Instagram",
+  email: "E-posta",
+  location: "Adres",
+    address: "Fatih, İstanbul, Türkiye"
   },
   program: {
     header: {
@@ -134,11 +137,25 @@ export default {
     header_desc: "TR MOIC kapsamında yer alan komiteler; öğrencilerin farklı dil ortamlarında diplomasi, temsil, hitabet ve çözüm üretme becerilerini geliştirmeyi amaçlayan akademik oturumlar olarak planlanmıştır.",
     list_title: "KOMİTE LİSTESİ",
     list_desc: "TR MOIC komiteleri, öğrencilerin uluslararası meseleleri akademik bir çerçevede tartışmalarına imkân tanımayı amaçlamaktadır.",
-    c1: "Ad-Hoc Committee of the Director-General",
-    c2: "Disarmament and International Security Committee",
-    c3: "Economic and Financial Committee",
-    c4: "Futuristic General Assembly",
-    c5: "Social, Humanitarian, and Cultural Committee",
+    // Komite 1
+    c1_title: "Siyonist İşgalin Genişlemesinin Engellenmesi",
+    c1_lang: "1. Arapça Komitesi",
+    
+    // Komite 2
+    c2_title: "Siyonist İşgalin Genişlemesinin Engellenmesi",
+    c2_lang: "2. Arapça Komitesi",
+
+    // Komite 3
+    c3_title: "Dijital Gençlik Konseyi (DYC): Yapay Zekanın Müslüman Gençler Üzerindeki Etkileri",
+    c3_lang: "1. İngilizce Komitesi",
+
+    // Komite 4
+    c4_title: "Dijital Gençlik Konseyi (DYC): Yapay Zekanın Müslüman Gençler Üzerindeki Etkileri",
+    c4_lang: "2. İngilizce Komitesi",
+
+    // Komite 5
+    c5_title: "Dünyadaki Müslüman Azınlıkların Durumu (DMAD)",
+    c5_lang: "1. Türkçe Komitesi",
     director: "Director"
   },
   ufsm: {

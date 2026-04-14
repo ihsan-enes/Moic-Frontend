@@ -24,8 +24,8 @@
     </v-list>
   </v-navigation-drawer>
 
-  <v-app-bar flat color="transparent" absolute dark class="px-md-10 mt-2" style="overflow: visible">
-    <v-img src="/images/logo.png" max-width="80" max-height="80" class="mr-3 cursor-pointer"
+  <v-app-bar flat color="transparent" absolute dark class="omar-nav px-md-10 mx-auto mt-2" style="overflow: visible">
+    <v-img src="/images/logo.png" max-width="100" max-height="100" class="mr-3 cursor-pointer"
       @click="$router.push('/')"></v-img>
     <v-spacer></v-spacer>
 
@@ -39,7 +39,7 @@
             </v-btn>
           </template>
 
-          <v-list class="bg-dark-menu py-1 mt-2 shadow-xl" min-width="150">
+          <v-list class="bg-dark-menu py-1 mt-2 shadow-xl" min-width="120">
             <v-list-item v-for="(child, j) in item.children" :key="j" :to="child.to" class="dropdown-item"
               density="compact">
               <v-list-item-title class="dropdown-text">
@@ -57,17 +57,19 @@
 
     <v-menu location="bottom end">
       <template v-slot:activator="{ props }">
-        <v-btn variant="outlined" color="white" v-bind="props" class="ml-5 text-none rounded-pill hidden-sm-and-down">
-          {{ currentLocaleName }} <v-icon right size="small">mdi-chevron-down</v-icon>
+        <v-btn variant="outlined" color="white" v-bind="props"
+          class="lang-btn ml-5 text-none rounded-pill hidden-sm-and-down" density="compact" height="32">
+          <span class="text-caption">{{ currentLocaleName }}</span>
+          <v-icon right size="14" class="ml-1">mdi-chevron-down</v-icon>
         </v-btn>
       </template>
-      <v-list bg-color="#001529" class="text-white py-0 border-gold-thin">
+      <v-list bg-color="#001529" max-width="85" class="text-white py-0 border-gold-thin">
         <v-list-item @click="changeLanguage('tr')"><v-list-item-title
-            class="text-caption font-weight-bold">TÜRKÇE</v-list-item-title></v-list-item>
+            class="dropdown-text text-caption font-weight-bold">TÜRKÇE</v-list-item-title></v-list-item>
         <v-list-item @click="changeLanguage('en')"><v-list-item-title
-            class="text-caption font-weight-bold">ENGLISH</v-list-item-title></v-list-item>
+            class="dropdown-text text-caption font-weight-bold">ENGLISH</v-list-item-title></v-list-item>
         <v-list-item @click="changeLanguage('ar')"><v-list-item-title
-            class="text-caption font-weight-bold">العربية</v-list-item-title></v-list-item>
+            class="dropdown-text text-caption font-weight-bold">العربية</v-list-item-title></v-list-item>
       </v-list>
     </v-menu>
 
@@ -120,6 +122,20 @@ export default {
 </script>
 
 <style scoped>
+.nav-link {
+  color: rgba(255, 255, 255, 0.94) !important;
+  font-weight: bolder !important;
+  font-size: 0.62rem !important;
+  letter-spacing: 0.11em !important;
+  position: relative;
+  overflow: visible !important;
+  margin: 0 1px !important;
+}
+
+.nav-link :deep(.v-btn__overlay) {
+  display: none !important;
+}
+
 /* ANA LİNK ANİMASYONU (KORUNDU) */
 .nav-link :deep(.v-btn__content)::after {
   content: '';
@@ -132,13 +148,28 @@ export default {
   transition: width 0.3s ease-in-out;
 }
 
+.lang-btn {
+  min-width: 35px;
+}
+
 .nav-link:hover :deep(.v-btn__content)::after {
   width: 100%;
 }
 
+.omar-nav {
+  max-width: 1000px !important;
+  /* Ortalamayı sağlayan kritik 3 satır: */
+  left: 0 !important;
+  right: 0 !important;
+  margin-inline: auto !important;
+}
+
 /* DİL BUTONU VE OVAL MENÜLER */
 .border-gold-thin {
-  border: 1px solid #d4af37 !important;
+  background-color: #0c141d !important;
+  border-radius: 12px !important;
+  border: none !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
 }
 
 .cursor-pointer {
@@ -154,8 +185,8 @@ export default {
 
 .dropdown-text {
   color: white;
-  font-size: 0.75rem !important;
-  font-weight: 600;
+  font-size: 0.65rem !important;
+  font-weight: 700;
   transition: color 0.2s ease;
 }
 

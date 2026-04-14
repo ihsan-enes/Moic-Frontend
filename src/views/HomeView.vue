@@ -171,7 +171,7 @@ export default {
 
 .main-title {
   font-family: 'Times New Roman', serif; 
-  font-size: clamp(2rem, 5vw, 4.5rem); 
+  font-size: clamp(2rem, 5vw, 2.5rem); 
   line-height: 1.1;
   font-weight: 700;
   text-transform: uppercase;

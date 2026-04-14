@@ -2,7 +2,7 @@ export default {
   welcome: "Welcome",
   giris: {
     first: "THE FIRST MOIC SESSION OF ULUSLARARASI FATİH SULTAN MEHMET ANADOLU İMAM HATİP HIGH SCHOOL",
-    second: "IMAM HATIP TURKIYE NATIONAL MOIC HIGHSCHOOL SUMMIT",
+    second: "The First National Model OIC Conference of International Fatih Sultan Mehmet Anatolian Imam Hatip High School",
     third: "Uluslararası Fatih Sultan Mehmet Anadolu İmam Hatip High School",
     fourth: "Introductory Video",
     fifth: "Diplomacy, oratory and leadership; come together in a distinguished academic conference atmosphere.",
@@ -36,7 +36,10 @@ export default {
     contact: "CONTACT",
     social: "SOCIAL MEDIA",
     copyright: "© 2026 TR MOIC. All rights reserved.",
-    address: "Istanbul, Turkiye"
+    instagram: "Instagram",
+  email: "Email",
+  location: "Address",
+    address: "Fatih, Istanbul, Turkiye"
   },
   iletisim: {
     sidebar: {
@@ -134,11 +137,20 @@ export default {
     header_desc: "The committees within TR MOIC are planned as academic sessions aiming to develop students' diplomacy, representation, and problem-solving skills.",
     list_title: "COMMITTEE LIST",
     list_desc: "TR MOIC committees aim to enable students to discuss international issues within an academic framework.",
-    c1: "Ad-Hoc Committee of the Director-General",
-    c2: "Disarmament and International Security Committee",
-    c3: "Economic and Financial Committee",
-    c4: "Futuristic General Assembly",
-    c5: "Social, Humanitarian, and Cultural Committee",
+    c1_title: "Prevention of the Expansion of Zionist Occupation",
+    c1_lang: "1st Arabic Committee",
+    
+    c2_title: "Prevention of the Expansion of Zionist Occupation",
+    c2_lang: "2nd Arabic Committee",
+
+    c3_title: "Digital Youth Council (DYC): Impacts of Artificial Intelligence on Muslim Youth",
+    c3_lang: "1st English Committee",
+
+    c4_title: "Digital Youth Council (DYC): Impacts of Artificial Intelligence on Muslim Youth",
+    c4_lang: "2nd English Committee",
+
+    c5_title: "Situation of Muslim Minorities in the World (DMAD)",
+    c5_lang: "1st Turkish Committee",
     director: "Director"
   },
   ufsm: {

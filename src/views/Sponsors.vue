@@ -19,11 +19,12 @@
       </p>
     </v-card>
 
-    <v-row density="comfortable" :dir="$i18n.locale === 'ar' ? 'rtl' : 'ltr'">
+    <v-row density="comfortable" dir="ltr">
+      
       <v-col cols="12" md="6" class="pa-2">
         <v-card class="sponsor-card rounded-lg h-100 pa-5 elevation-1">
-          <v-sheet color="grey-lighten-4" height="140" class="rounded-lg d-flex align-center justify-center mb-4 overflow-hidden border">
-             <span class="text-caption text-grey-lighten-1">LOGO ALANI</span>
+          <v-sheet color="white" height="140" class="rounded-lg d-flex align-center justify-center mb-4 overflow-hidden border pa-4">
+              <v-img src="/images/ilim_yayma.png" contain max-height="100%"></v-img>
           </v-sheet>
           <span class="text-overline gold-text d-block mb-1" style="font-size: 0.65rem !important">{{ $t("sponsors.s1.label") }}</span>
           <h3 class="sponsor-title mb-2">{{ $t("sponsors.s1.title") }}</h3>
@@ -33,14 +34,15 @@
 
       <v-col cols="12" md="6" class="pa-2">
         <v-card class="sponsor-card rounded-lg h-100 pa-5 elevation-1">
-          <v-sheet color="grey-lighten-4" height="140" class="rounded-lg d-flex align-center justify-center mb-4 overflow-hidden border">
-             <span class="text-caption text-grey-lighten-1">LOGO ALANI</span>
+          <v-sheet color="white" height="140" class="rounded-lg d-flex align-center justify-center mb-4 overflow-hidden border pa-4">
+              <v-img src="/images/onder.png" contain max-height="100%"></v-img>
           </v-sheet>
           <span class="text-overline gold-text d-block mb-1" style="font-size: 0.65rem !important">{{ $t("sponsors.s2.label") }}</span>
           <h3 class="sponsor-title mb-2">{{ $t("sponsors.s2.title") }}</h3>
           <p class="text-caption text-grey-darken-1 mb-0">{{ $t("sponsors.s2.desc") }}</p>
         </v-card>
       </v-col>
+
     </v-row>
 
     <v-card class="info-banner rounded-lg mt-8 pa-6 elevation-2">
@@ -77,5 +79,8 @@ export default {
 .info-banner { background-color: #001d3d !important; }
 .line-height-relaxed { line-height: 1.5; }
 .border-light { border: 1px solid rgba(0,0,0,0.05) !important; }
+
+/* Arapça için metin yönü düzeltmeleri */
 [dir="rtl"] .text-left { text-align: right !important; }
+[dir="rtl"] .ml-2 { margin-right: 8px !important; margin-left: 0 !important; }
 </style>

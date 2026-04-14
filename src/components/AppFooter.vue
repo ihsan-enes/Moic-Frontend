@@ -3,9 +3,9 @@
     <v-container>
       <v-row>
         <v-col cols="12" md="4" class="pr-md-10">
-          <v-img src="/images/logo.png" max-width="60" class="mb-4"></v-img>
-          <h3 class="footer-title mb-4">{{ $t('footer.title') }}</h3>
-          <p class="text-body-2 opacity-70 line-height-relaxed" style="font-size: x-small;">
+          <v-img src="/images/logo.png" max-width="125" class="mx-auto"></v-img>
+          <h3 class="footer-title my-0">{{ $t('footer.title') }}</h3>
+          <p class="text-body-2 mb-0 opacity-70 line-height-relaxed" style="font-size:small;">
             {{ $t('footer.description') }}
           </p>
         </v-col>
@@ -32,16 +32,23 @@
           </div>
           <div class="contact-item">
             <v-icon color="#d4af37" start size="18">mdi-phone-outline</v-icon>
-            <span class="text-body-2">+90 5xx xxx xx xx</span>
+            <span class="text-body-2">+90 541 557 29 97 </span>
           </div>
         </v-col>
 
         <v-col cols="12" sm="4" md="3">
           <h4 class="column-title mb-6">{{ $t('footer.social') }}</h4>
           <ul class="footer-list">
-            <li><a href="#"><v-icon start size="16">mdi-instagram</v-icon> Instagram</a></li>
-            <li><a href="#"><v-icon start size="16">mdi-email</v-icon> E-posta</a></li>
-            <li><a href="#"><v-icon start size="16">mdi-map-marker</v-icon> Konum</a></li>
+            <li><a
+                href="https://www.instagram.com/moic.fatih?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><v-icon
+                  start size="16">mdi-instagram</v-icon> {{ $t("footer.instagram") }}</a></li>
+            <li @click="copyEmail()"><a href="#"><v-icon start size="16">mdi-email</v-icon> {{ $t("footer.email") }}</a></li>
+             <v-snackbar v-model="snackbar" timeout="2000" color="success" rounded="pill">
+              Mail adresi panoya kopyalandı!
+            </v-snackbar>
+            <li><a
+                href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x14caba1ebd38f40d:0x67b511d912d37f69?sa=X&ved=1t:8290&ictx=111"><v-icon
+                  start size="16">mdi-map-marker</v-icon> {{ $t("footer.location") }}</a></li>
           </ul>
         </v-col>
       </v-row>
@@ -54,6 +61,29 @@
     </v-container>
   </v-footer>
 </template>
+<script>
+
+export default {
+  data: () => ({
+    snackbar: false,
+    emailToCopy: 'fsmmoic@gmail.com'
+  }),
+  methods: {
+    async copyEmail() {
+      try {
+        await navigator.clipboard.writeText(this.emailToCopy);
+        this.snackbar = true;
+      } catch (err) {
+        console.error('Kopyalama başarısız:', err);
+
+      }
+    },
+
+  }
+}
+
+
+</script>
 
 <style scoped>
 .footer-main {
@@ -109,7 +139,7 @@
 
 .footer-list a:hover {
   color: #d4af37;
-  padding-left: 5px; 
+  padding-left: 5px;
 }
 
 .contact-item {
@@ -118,7 +148,15 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
-.opacity-70 { opacity: 0.7; }
-.opacity-60 { opacity: 0.6; }
-.line-height-relaxed { line-height: 1.8; }
+.opacity-70 {
+  opacity: 0.7;
+}
+
+.opacity-60 {
+  opacity: 0.6;
+}
+
+.line-height-relaxed {
+  line-height: 1.8;
+}
 </style>

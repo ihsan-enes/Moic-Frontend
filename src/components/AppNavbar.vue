@@ -25,7 +25,7 @@
     <v-container class="nav-container elevation-4 rounded-xl d-flex align-center px-2 px-md-4 flex-nowrap">
       
       <div class="logo-wrapper cursor-pointer flex-shrink-0" @click="$router.push('/')">
-        <v-img src="/images/logo.png" width="55" contain></v-img>
+        <v-img src="/images/logo.png" width="85" contain></v-img>
       </div>
 
       <v-spacer></v-spacer>
@@ -34,13 +34,13 @@
         <template v-for="(item, i) in menuItems" :key="i">
           <v-menu v-if="item.children" open-on-hover location="bottom center" transition="slide-y-transition">
             <template v-slot:activator="{ props }">
-              <v-btn v-bind="props" :to="item.to" variant="text" class="custom-nav-link">
+              <v-btn v-bind="props" :to="item.to" variant="text" class="custom-nav-link px-3">
                 {{ $t(item.title) }}
                 <v-icon end size="x-small" class="ml-1">mdi-chevron-down</v-icon>
               </v-btn>
             </template>
 
-            <v-list class="bg-dark-menu py-1 mt-2 shadow-xl" min-width="150">
+            <v-list class="bg-dark-menu py-1 mt-2 shadow-xl" min-width="120">
               <v-list-item v-for="(child, j) in item.children" :key="j" :to="child.to" class="dropdown-item"
                 density="compact">
                 <v-list-item-title class="dropdown-text">
@@ -50,7 +50,7 @@
             </v-list>
           </v-menu>
 
-          <v-btn v-else :to="item.to" variant="text" class="custom-nav-link">
+          <v-btn v-else :to="item.to" variant="text" class="custom-nav-link px-3">
             {{ $t(item.title) }}
           </v-btn>
         </template>
@@ -127,17 +127,17 @@ export default {
 .nav-container {
   background: linear-gradient(135deg, #49515d 0%, #3c424b 100%) !important;
   height: 75px;
-  max-width: 1200px; /* Konteynerin çok yayılmasını engelledik */
+  max-width: 950px; 
 }
 
 .custom-nav-link {
-  color: white !important;
-  font-weight: 700;
-  font-size: 0.7rem; /* Fontu bir tık küçülttük yer kazanmak için */
-  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.94) !important;
+  font-weight: bolder !important;
+  font-size: 0.62rem !important;
+  letter-spacing: 0.11em !important;
   position: relative;
   overflow: visible !important;
-  margin: 0 4px !important; /* Boşlukları daralttık */
+  margin: 0 1px !important; 
 }
 
 /* Büyük ekranlarda biraz daha geniş boşluk verebiliriz */
@@ -159,6 +159,9 @@ export default {
   transition: width 0.3s ease-in-out;
   border-radius: 2px;
 }
+.custom-nav-link :deep(.v-btn__overlay) {
+  display: none !important;
+}
 
 .custom-nav-link:hover :deep(.v-btn__content)::after {
   width: 100%;
@@ -174,7 +177,7 @@ export default {
 
 .dropdown-text {
   color: white;
-  font-size: 0.7rem !important;
+  font-size: 0.55rem !important;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -185,7 +188,7 @@ export default {
 
 .lang-btn {
   border: 1px solid rgba(255, 255, 255, 0.3) !important;
-  min-width: 65px;
+  min-width:35px;
 }
 
 .cursor-pointer {
