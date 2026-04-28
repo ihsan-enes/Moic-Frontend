@@ -3,10 +3,12 @@ import tr from './locales/tr.js'
 import en from './locales/en.js'
 import ar from "./locales/ar.js";
 
+const savedLocale = localStorage.getItem('user-locale') || 'tr'; 
+
 const i18n = createI18n({
   legacy: false,
-  locale: "tr",
-  fallbackLocale: "en",
+  locale: savedLocale,
+  fallbackLocale: "tr",
   messages:{
     tr,
     en,

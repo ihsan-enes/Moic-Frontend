@@ -59,6 +59,7 @@
 </template>
 
 <script>
+import adminInstance from '@/service/AdminApi';
 export default {
   data() {
     return {
@@ -66,9 +67,16 @@ export default {
     };
   },
   methods: {
-    logout() {
-      localStorage.removeItem("adminToken");
-      this.$router.push("/adminLogin");
+    async logout() {
+      try {
+        await adminInstance.post('/Auth/logout');
+      } catch (error) {
+        console.error("Çıkış yapılırken hata oluştu:", error);
+      } finally {
+        localStorage.removeItem("adminUser"); 
+        
+        this.$router.push("/adminLogin");
+      }
     }
   }
 };

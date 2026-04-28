@@ -46,85 +46,51 @@
                         <v-row density="comfortable">
                             <v-col cols="12" sm="6">
                                 <label class="input-label">{{ $t("iletisim.form.name") }}</label>
-                                <v-text-field
-                                    v-model="formData.name"
-                                    :placeholder="$t('iletisim.form.name')"
-                                    variant="filled"
-                                    rounded="lg"
-                                    flat
-                                    bg-color="#f5f5f5"
-                                    density="comfortable"
-                                ></v-text-field>
+                                <v-text-field v-model="formData.name" :placeholder="$t('iletisim.form.name')" variant="filled" rounded="lg" flat bg-color="#f5f5f5" density="comfortable"></v-text-field>
                             </v-col>
 
                             <v-col cols="12" sm="6">
                                 <label class="input-label">{{ $t("iletisim.form.email") }}</label>
-                                <v-text-field
-                                    v-model="formData.email"
-                                    placeholder="ornek@mail.com"
-                                    variant="filled"
-                                    rounded="lg"
-                                    flat
-                                    bg-color="#f5f5f5"
-                                    density="comfortable"
-                                ></v-text-field>
+                                <v-text-field v-model="formData.email" placeholder="ornek@mail.com" variant="filled" rounded="lg" flat bg-color="#f5f5f5" density="comfortable"></v-text-field>
                             </v-col>
 
                             <v-col cols="12" sm="6">
                                 <label class="input-label">{{ $t("iletisim.form.subject") }}</label>
-                                <v-text-field
-                                    v-model="formData.subject"
-                                    :placeholder="$t('iletisim.form.subject')"
-                                    variant="filled"
-                                    rounded="lg"
-                                    flat
-                                    bg-color="#f5f5f5"
-                                    density="comfortable"
-                                ></v-text-field>
+                                <v-text-field v-model="formData.subject" :placeholder="$t('iletisim.form.subject')" variant="filled" rounded="lg" flat bg-color="#f5f5f5" density="comfortable"></v-text-field>
                             </v-col>
 
                             <v-col cols="12" sm="6">
                                 <label class="input-label">{{ $t("iletisim.form.phone") }}</label>
-                                <v-text-field
-                                    v-model="formData.phoneNumber"
-                                    placeholder="+90 ..."
-                                    variant="filled"
-                                    rounded="lg"
-                                    flat
-                                    bg-color="#f5f5f5"
-                                    density="comfortable"
-                                ></v-text-field>
+                                <v-text-field v-model="formData.phoneNumber" placeholder="+90 ..." variant="filled" rounded="lg" flat bg-color="#f5f5f5" density="comfortable"></v-text-field>
                             </v-col>
 
                             <v-col cols="12">
                                 <label class="input-label">{{ $t("iletisim.form.message") }}</label>
-                                <v-textarea
-                                    v-model="formData.message"
-                                    :placeholder="$t('iletisim.form.placeholder_msg')"
-                                    variant="filled"
-                                    rounded="lg"
-                                    flat
-                                    bg-color="#f5f5f5"
-                                    rows="4"
-                                    density="comfortable"
-                                ></v-textarea>
+                                <v-textarea v-model="formData.message" :placeholder="$t('iletisim.form.placeholder_msg')" variant="filled" rounded="lg" flat bg-color="#f5f5f5" rows="4" density="comfortable"></v-textarea>
                             </v-col>
                         </v-row>
 
-                        
-
-                        <v-btn
-                            :loading="loading"
-                            class="px-10 py-4 text-none font-weight-bold gold-submit-btn"
-                            rounded="pill"
-                            type="submit"
-                        >
+                        <v-btn :loading="loading" class="px-10 py-4 text-none font-weight-bold gold-submit-btn" rounded="pill" type="submit">
                             {{ $t("iletisim.form.submit") }}
                         </v-btn>
                     </v-form>
                 </v-card>
             </v-col>
         </v-row>
+
+        <v-snackbar
+            v-model="snackbar.show"
+            :color="snackbar.color"
+            timeout="4000"
+            location="top"
+            rounded="pill"
+            elevation="24"
+        >
+            <div class="text-center d-flex align-center justify-center ga-2 font-weight-bold text-uppercase" style="letter-spacing: 1px; font-size: 0.8rem;">
+                <v-icon size="20">{{ snackbar.icon }}</v-icon>
+                {{ snackbar.text }}
+            </div>
+        </v-snackbar>
     </v-container>
     <AppFooter></AppFooter>
 </template>
@@ -135,10 +101,7 @@ import AppNavbar from "@/components/AppNavbar.vue";
 import instance from "@/service/Api"; 
 
 export default {
-    components: {
-        AppNavbar,
-        AppFooter
-    },
+    components: { AppNavbar, AppFooter },
     data() {
         return {
             loading: false, 
@@ -148,6 +111,12 @@ export default {
                 phoneNumber: '',
                 subject: '', 
                 message: ''
+            },
+            snackbar: {
+                show: false,
+                text: '',
+                color: '',
+                icon: ''
             }
         };
     },
@@ -174,9 +143,8 @@ export default {
     },
     methods: {
         async submitForm() {
-            // Basit validasyon
             if (!this.formData.name || !this.formData.email || !this.formData.message) {
-                alert("Lütfen zorunlu alanları doldurunuz.");
+                this.showNotification("Lütfen zorunlu alanları doldurunuz.", "warning", "mdi-alert");
                 return;
             }
 
@@ -185,31 +153,41 @@ export default {
                 const response = await instance.post('/Complaint/Create', this.formData);
                 
                 if (response.status === 200 || response.status === 201) {
-                    alert("Mesajınız başarıyla iletildi!");
+                    this.showNotification("Mesajınız başarıyla iletildi!", "success", "mdi-check-all");
                     this.resetForm(); 
                 }
             } catch (error) {
-                console.error("Mesaj gönderim hatası:", error);
-                alert("Mesaj gönderilirken bir hata oluştu.");
+                console.error("Hata:", error);
+
+                // --- RATE LIMIT (429) KONTROLÜ ---
+                if (error.response?.status === 429 || error.message?.includes('429')) {
+                    this.showNotification(
+                        "Çok fazla mesaj gönderdiniz! Lütfen 3 dakika bekleyin.", 
+                        "error", 
+                        "mdi-clock-alert"
+                    );
+                } else {
+                    this.showNotification("Mesaj gönderilirken bir hata oluştu.", "error", "mdi-wifi-off");
+                }
             } finally {
                 this.loading = false;
             }
         },
+        showNotification(text, color, icon) {
+            this.snackbar.text = text;
+            this.snackbar.color = color;
+            this.snackbar.icon = icon;
+            this.snackbar.show = true;
+        },
         resetForm() {
-            this.formData = {
-                name: '',
-                email: '',
-                phoneNumber: '',
-                subject: '',
-                message: ''
-            };
+            this.formData = { name: '', email: '', phoneNumber: '', subject: '', message: '' };
         }
     }
 };
 </script>
 
 <style scoped>
-/* Mevcut stilleriniz aynen kalıyor... */
+/* Mevcut stillerin aynen korunuyor... */
 .bg-light-cream { background-color: #fcfaf5; }
 .contact-info-header { background: linear-gradient(135deg, #001529 0%, #002333 100%) !important; color: white; }
 .sidebar-title { font-family: "Times New Roman", serif; font-size: 1.2rem; }

@@ -23,7 +23,7 @@
 
   <v-app-bar flat absolute color="transparent" class="mt-4 px-2" height="100" style="overflow: visible">
     <v-container class="nav-container elevation-4 rounded-xl d-flex align-center px-2 px-md-4 flex-nowrap">
-      
+
       <div class="logo-wrapper cursor-pointer flex-shrink-0" @click="$router.push('/')">
         <v-img src="/images/logo.png" width="85" contain></v-img>
       </div>
@@ -54,27 +54,29 @@
             {{ $t(item.title) }}
           </v-btn>
         </template>
+
+        <v-menu location="bottom end">
+          <template v-slot:activator="{ props }">
+            <v-btn variant="outlined" color="white" v-bind="props"
+              class="ml-2 ml-lg-6 text-none rounded-pill lang-btn flex-shrink-0" density="comfortable">
+              {{ currentLocaleName }}
+              <v-icon end size="x-small">mdi-chevron-down</v-icon>
+            </v-btn>
+          </template>
+          <v-list class="bg-dark-menu py-1">
+            <v-list-item @click="changeLanguage('tr')"><v-list-item-title
+                class="dropdown-text">TR</v-list-item-title></v-list-item>
+            <v-list-item @click="changeLanguage('en')"><v-list-item-title
+                class="dropdown-text">EN</v-list-item-title></v-list-item>
+            <v-list-item @click="changeLanguage('ar')"><v-list-item-title
+                class="dropdown-text">AR</v-list-item-title></v-list-item>
+          </v-list>
+        </v-menu>
+
       </div>
-
-      <v-menu location="bottom end">
-        <template v-slot:activator="{ props }">
-          <v-btn variant="outlined" color="white" v-bind="props" 
-            class="ml-2 ml-lg-6 text-none rounded-pill lang-btn flex-shrink-0"
-            density="comfortable">
-            {{ currentLocaleName }}
-            <v-icon end size="x-small">mdi-chevron-down</v-icon>
-          </v-btn>
-        </template>
-        <v-list class="bg-dark-menu py-1">
-          <v-list-item @click="changeLanguage('tr')"><v-list-item-title class="dropdown-text">TR</v-list-item-title></v-list-item>
-          <v-list-item @click="changeLanguage('en')"><v-list-item-title class="dropdown-text">EN</v-list-item-title></v-list-item>
-          <v-list-item @click="changeLanguage('ar')"><v-list-item-title class="dropdown-text">AR</v-list-item-title></v-list-item>
-        </v-list>
-      </v-menu>
-
       <v-btn icon="mdi-menu" variant="text" color="white" class="hidden-lg-and-up ml-2 flex-shrink-0"
         @click="drawer = !drawer"></v-btn>
-        
+
     </v-container>
   </v-app-bar>
 </template>
@@ -117,6 +119,9 @@ export default {
   methods: {
     changeLanguage(lang) {
       this.$i18n.locale = lang;
+
+      localStorage.setItem('user-locale', lang);
+
       this.drawer = false;
     }
   }
@@ -127,7 +132,7 @@ export default {
 .nav-container {
   background: linear-gradient(135deg, #49515d 0%, #3c424b 100%) !important;
   height: 75px;
-  max-width: 950px; 
+  max-width: 950px;
 }
 
 .custom-nav-link {
@@ -137,7 +142,7 @@ export default {
   letter-spacing: 0.11em !important;
   position: relative;
   overflow: visible !important;
-  margin: 0 1px !important; 
+  margin: 0 1px !important;
 }
 
 /* Büyük ekranlarda biraz daha geniş boşluk verebiliriz */
@@ -159,6 +164,7 @@ export default {
   transition: width 0.3s ease-in-out;
   border-radius: 2px;
 }
+
 .custom-nav-link :deep(.v-btn__overlay) {
   display: none !important;
 }
@@ -188,7 +194,7 @@ export default {
 
 .lang-btn {
   border: 1px solid rgba(255, 255, 255, 0.3) !important;
-  min-width:35px;
+  min-width: 35px;
 }
 
 .cursor-pointer {

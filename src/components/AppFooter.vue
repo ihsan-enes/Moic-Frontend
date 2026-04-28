@@ -13,10 +13,10 @@
         <v-col cols="12" sm="4" md="2">
           <h4 class="column-title mb-6">{{ $t('footer.quick_links') }}</h4>
           <ul class="footer-list">
-            <li><a href="/">{{ $t('navbar.about') }}</a></li>
-            <li><a href="/committees">{{ $t('navbar.committees') }}</a></li>
-            <li><a href="/application">{{ $t('navbar.apply') }}</a></li>
-            <li><a href="/contact">{{ $t('navbar.contact') }}</a></li>
+            <li><router-link to="/">{{ $t('navbar.about') }}</router-link></li>
+            <li><router-link to="/committees">{{ $t('navbar.committees') }}</router-link></li>
+            <li><router-link to="/application">{{ $t('navbar.apply') }}</router-link></li>
+            <li><router-link to="/contact">{{ $t('navbar.contact') }}</router-link></li>
           </ul>
         </v-col>
 

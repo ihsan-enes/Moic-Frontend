@@ -16,6 +16,7 @@ import Ufsm from "@/views/Ufsm.vue";
 import Sponsors from "@/views/Sponsors.vue";
 import Icyf from "@/views/Icyf.vue";
 import Rules from "@/views/Rules.vue";
+import Cookies from "js-cookie";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -112,30 +113,21 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from) => {
-  const token = localStorage.getItem("adminToken");
+  const adminUser = JSON.parse(localStorage.getItem("adminUser"));
 
   if (to.meta.requiresAdmin) {
-    if (!token) return { name: "adminLogin" };
+    if (!adminUser) return { name: "adminLogin" };
 
-    try {
-      const decoded = jwtDecode(token);
-
-      const userRole = decoded["role"]; 
-    
-      const isAdmin = Array.isArray(userRole) 
+    const userRole = adminUser.roles; 
+    const isAdmin = Array.isArray(userRole) 
         ? userRole.includes("Admin") 
         : userRole === "Admin";
 
-      if (isAdmin) {
-        return true; 
-      } else {
-        alert("Yetkisiz erişim! Sadece Adminler girebilir.");
-        return { name: "home" }; 
-      }
-    } catch (error) {
-      console.error("Token hatası:", error);
-      localStorage.removeItem("adminToken");
-      return { name: "adminLogin" };
+    if (isAdmin) {
+      return true; 
+    } else {
+      alert("Yetkisiz erişim!");
+      return { name: "home" }; 
     }
   }
   return true;

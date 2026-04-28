@@ -6,9 +6,6 @@
       <div class="content-z">
         <span class="text-overline gold-text mb-2 d-block">{{ $t("ufsm.overline") }}</span>
         <h1 class="ufsm-main-title text-white mb-4">{{ $t("ufsm.title") }}</h1>
-        <p class="text-subtitle-1 text-white opacity-80 mx-auto" style="max-width: 600px">
-          {{ $t("ufsm.subtitle") }}
-        </p>
       </div>
     </v-card>
 
@@ -33,7 +30,7 @@ export default {
 
 <style scoped>
 .ufsm-header-card { position: relative; min-height: 400px; background-image: url('/images/ufsm.jpg'); background-size: cover; background-position: center; border: none !important; }
-.overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(0,29,61,0.20) 0%, rgba(0,29,61,0.65) 100%); z-index: 1; }
+.overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to bottom, rgba(0,29,61,0.40) 0%, rgba(0,29,61,0.85) 100%); z-index: 1; }
 .content-z { position: relative; z-index: 2; }
 .ufsm-main-title { font-family: "Times New Roman", serif; font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 700; }
 .gold-text { color: #d4af37; font-weight: 800; }

@@ -115,6 +115,7 @@ export default {
   methods: {
     changeLanguage(lang) {
       this.$i18n.locale = lang;
+      localStorage.setItem('user-locale',lang);
       this.drawer = false;
     }
   }

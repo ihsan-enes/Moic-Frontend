@@ -2,7 +2,6 @@
     <v-container fluid class="fill-height login-bg pa-0">
         <v-row align="center" justify="center" class="ma-0">
             <v-col cols="12" sm="8" md="4" lg="3">
-
                 <div class="text-center mb-8">
                     <v-img src="/images/logo.png" width="90" class="mx-auto mb-4" contain></v-img>
                     <v-btn to="/" variant="text" color="white" prepend-icon="mdi-arrow-left"
@@ -13,8 +12,7 @@
 
                 <v-card class="login-card pa-8 pa-md-10 rounded-xl elevation-24">
                     <div class="text-center mb-10">
-                        <span class="text-overline gold-text">YÖNETİM SİSTEMİ</span>
-                        <h1 class="admin-title mt-2">ADMİN GİRİŞİ</h1>
+                        <span class="text-overline gold-text">YÖNETİM SİSTEMİ GİRİŞİ</span>
                         <p class="text-caption text-grey-darken-1 mt-1">Lütfen yetkili bilgilerinizi giriniz.</p>
                     </div>
 
@@ -32,9 +30,8 @@
                             @click:append-inner="showPassword = !showPassword" density="comfortable"
                             hide-details></v-text-field>
 
-
-                        <v-btn block size="large" rounded="pill" class="login-btn py-7 font-weight-bold mt-3" type="submit"
-                            :loading="loading">
+                        <v-btn block size="large" rounded="pill" class="login-btn py-7 font-weight-bold mt-8"
+                            type="submit" :loading="loading">
                             SİSTEME GİRİŞ YAP
                         </v-btn>
                     </v-form>
@@ -45,12 +42,21 @@
                 </div>
             </v-col>
         </v-row>
-    </v-container>
 
+        <v-snackbar v-model="snackbar.show" :color="snackbar.color" timeout="3000" location="top" rounded="pill"
+            elevation="24">
+            <div class="text-center d-flex align-center justify-center ga-2 font-weight-bold text-uppercase"
+                style="letter-spacing: 1px;">
+                <v-icon size="20">{{ snackbar.icon }}</v-icon>
+                {{ snackbar.text }}
+            </div>
+        </v-snackbar>
+    </v-container>
 </template>
 
 <script>
 import instance from '@/service/Api';
+
 export default {
     data() {
         return {
@@ -59,28 +65,58 @@ export default {
             form: {
                 userName: '',
                 password: ''
+            },
+            snackbar: {
+                show: false,
+                text: '',
+                color: '',
+                icon: ''
             }
         }
     },
     methods: {
-        async handleLogin() {
-            if (!this.form.userName || !this.form.password) return;
+    async handleLogin() {
+        if (!this.form.userName || !this.form.password) return;
 
-            this.loading = true;
-            try {
-                const res = await instance.post('/Auth/login',this.form)
-                localStorage.setItem('adminToken',res.data.token);
-                this.$router.push("/adminContact");
-            } catch (error) {
-                alert("Bir Sorun oluştu")
-            }
+        this.loading = true;
+        try {
+            const res = await instance.post('/Auth/login', this.form);
+
+            this.showNotification("Giriş Başarılı! Yönlendiriliyorsunuz...", "success", "mdi-check-circle");
+
+            localStorage.setItem('adminUser', JSON.stringify({
+                userName: res.data.userName,
+                roles: res.data.roles
+            }));
+
             setTimeout(() => {
-                this.loading = false;
-                console.log("Giriş bilgileri:", this.form);
-                alert("giriş yapıldı");
-            }, 1500);
+                this.$router.push("/adminContact");
+            }, 1000);
+
+        } catch (error) {
+            this.loading = false;
+
+        if (error.response?.status === 429) {
+            this.showNotification("Çok fazla deneme! 10 dk bekleyin.", "error", "mdi-clock-alert");
+        } 
+        else if (error.message?.includes('429') || error.toString().includes('429')) {
+            this.showNotification("Çok fazla deneme! 10 dk bekleyin.", "error", "mdi-clock-alert");
         }
+        else if (error.response?.status === 401) {
+            this.showNotification("Hatalı kullanıcı adı veya şifre!", "error", "mdi-alert-circle");
+        } 
+        else {
+            this.showNotification("Sistemle bağlantı kurulamadı!", "error", "mdi-wifi-off");
+        }
+        }
+    },
+    showNotification(text, color, icon) {
+        this.snackbar.text = text;
+        this.snackbar.color = color;
+        this.snackbar.icon = icon;
+        this.snackbar.show = true;
     }
+}
 }
 </script>
 
@@ -110,16 +146,6 @@ export default {
     color: #333;
     margin-bottom: 6px;
     letter-spacing: 0.5px;
-}
-
-.gold-link {
-    color: #b8860b;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.gold-link:hover {
-    color: #d4af37;
 }
 
 .login-btn {
