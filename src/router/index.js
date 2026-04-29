@@ -114,9 +114,12 @@ const router = createRouter({
 
 router.beforeEach((to, from) => {
   const adminUser = JSON.parse(localStorage.getItem("adminUser"));
+  const adminToken = localStorage.getItem("adminToken");
 
   if (to.meta.requiresAdmin) {
-    if (!adminUser) return { name: "adminLogin" };
+    if (!adminUser || !adminToken) {
+        return { name: "adminLogin" };
+    }
 
     const userRole = adminUser.roles; 
     const isAdmin = Array.isArray(userRole) 

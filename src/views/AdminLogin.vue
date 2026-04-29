@@ -82,8 +82,10 @@ export default {
         try {
             const res = await instance.post('/Auth/login', this.form);
 
-            this.showNotification("Giriş Başarılı! Yönlendiriliyorsunuz...", "success", "mdi-check-circle");
+            this.showNotification("Giriş Başarılı!", "success", "mdi-check-circle");
 
+            
+            localStorage.setItem('adminToken', res.data.token); 
             localStorage.setItem('adminUser', JSON.stringify({
                 userName: res.data.userName,
                 roles: res.data.roles
