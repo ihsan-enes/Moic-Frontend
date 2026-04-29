@@ -1,7 +1,7 @@
 import axios from "axios";
 
 var instance = axios.create({
-    baseURL:'http://localhost:5119/api',
+    baseURL:'https://moic-backend-production.up.railway.app/api',
     withCredentials:true
 })
 
