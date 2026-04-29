@@ -15,7 +15,7 @@
                     <v-data-table :headers="headers" :items="members" :loading="loading" hover>
                         <template v-slot:item.photoUrl="{ item }">
                             <v-avatar size="50" class="my-2 border-gold">
-                                <v-img :src="'https://storage.googleapis.com/moik-team-photos/' + item.photoUrl" cover>
+                                <v-img :src="'https://images.fatihmoic.com/' + item.photoUrl" cover>
                                     <template v-slot:placeholder><v-icon color="grey">mdi-account</v-icon></template>
                                 </v-img>
                             </v-avatar>

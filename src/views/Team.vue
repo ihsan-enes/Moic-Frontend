@@ -72,7 +72,7 @@ export default {
         getImageUrl(photoUrl) {
             if (!photoUrl) return '/src/assets/images/placeholder-user.jpg';
             const bucketName = "moik-team-photos";
-            return `https://storage.googleapis.com/${bucketName}/${photoUrl}`;
+            return `https://images.fatihmoic.com/${photoUrl}`;
         }
     }
 }
