@@ -68,15 +68,9 @@ export default {
   },
   methods: {
     async logout() {
-      try {
-        await adminInstance.post('/Auth/logout');
-      } catch (error) {
-        console.error("Çıkış yapılırken hata oluştu:", error);
-      } finally {
-        localStorage.removeItem("adminUser"); 
-        
-        this.$router.push("/adminLogin");
-      }
+      localStorage.removeItem("adminToken");
+      localStorage.removeItem("adminUser");
+      this.$router.push("/adminLogin");
     }
   }
 };
