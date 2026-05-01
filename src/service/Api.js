@@ -1,7 +1,7 @@
 import axios from "axios";
 
 var instance = axios.create({
-    baseURL:'https://api.fatihmoic.com/api',
+    baseURL:import.meta.env.VITE_API_BASE_URL,
     withCredentials:false
 })
 
