@@ -37,8 +37,8 @@ export default {
     social: "SOSYAL MEDYA",
     copyright: "© 2026 TR MOIC. Tüm hakları saklıdır.",
     instagram: "Instagram",
-  email: "E-posta",
-  location: "Adres",
+    email: "E-posta",
+    location: "Adres",
     address: "Fatih, İstanbul, Türkiye"
   },
   program: {
@@ -137,25 +137,21 @@ export default {
     header_desc: "TR MOIC kapsamında yer alan komiteler; öğrencilerin farklı dil ortamlarında diplomasi, temsil, hitabet ve çözüm üretme becerilerini geliştirmeyi amaçlayan akademik oturumlar olarak planlanmıştır.",
     list_title: "KOMİTE LİSTESİ",
     list_desc: "TR MOIC komiteleri, öğrencilerin uluslararası meseleleri akademik bir çerçevede tartışmalarına imkân tanımayı amaçlamaktadır.",
-    // Komite 1
-    c1_title: "Siyonist İşgalin Genişlemesinin Engellenmesi",
+    c1_title: "Siyonist İşgalin Genişlemesinin Önlenmesi ve İslam Dünyasının Önündeki Siyonist Engellerin Kaldırılması",
     c1_lang: "1. Arapça Komitesi",
-    
-    // Komite 2
-    c2_title: "Siyonist İşgalin Genişlemesinin Engellenmesi",
-    c2_lang: "2. Arapça Komitesi",
 
-    // Komite 3
-    c3_title: "Dijital Gençlik Konseyi (DYC): Yapay Zekanın Müslüman Gençler Üzerindeki Etkileri",
-    c3_lang: "1. İngilizce Komitesi",
+    c2_title: "Dünyadaki Müslüman Azınlıkların Durumu",
+    c2_lang: "1. Türkçe Komitesi",
 
-    // Komite 4
-    c4_title: "Dijital Gençlik Konseyi (DYC): Yapay Zekanın Müslüman Gençler Üzerindeki Etkileri",
-    c4_lang: "2. İngilizce Komitesi",
+    c3_title: "İslami Sosyal İşler Komitesi",
+    c3_lang: "2. Türkçe Komitesi",
 
-    // Komite 5
-    c5_title: "Dünyadaki Müslüman Azınlıkların Durumu (DMAD)",
-    c5_lang: "1. Türkçe Komitesi",
+    c4_title: "İslamofobi'ye Karşı Toplumsal Dayanıklılık",
+    c4_lang: "1. İngilizce Komitesi",
+
+    c5_title: "Dijital Gençlik Konseyi",
+    c5_lang: "2. İngilizce Komitesi",
+
     director: "Director"
   },
   ufsm: {
@@ -256,25 +252,85 @@ export default {
     error: "Ekip bilgileri şu an alınamıyor."
   },
   apply: {
-  overline: "TR MOIC / 2026",
-  title: "BAŞVURU <em>SÜRECİ</em>",
-  subtitle: "Konferansımıza katılmak için lütfen aşağıdaki temel kuralları inceleyiniz ve ardından başvuru formuna ilerleyiniz.",
-  rules_reminder_title: "Önemli Kurallar & Hatırlatmalar",
-  cat1_title: "Genel Davranış Kuralları",
-  cat1_items: [
-    "Tüm katılımcılar saygılı ve yapıcı bir iletişim dili kullanmalıdır.",
-    "Hakaret, küçümseme veya ayrımcılık içeren davranışlar kabul edilmez.",
-    "Konferans ortamında disiplinli ve sorumluluk sahibi davranılmalıdır."
-  ],
-  cat2_title: "Komite Kuralları",
-  cat2_items: [
-    "Delegeler yalnızca temsil ettikleri ülke adına konuşmalıdır.",
-    "Komite başkanlarının yönlendirmelerine uyulması zorunludur.",
-    "Oturum düzenini bozacak davranışlardan kaçınılmalıdır."
-  ],
-  cta_title: "Başvuruya Hazır mısınız?",
-  cta_desc: "Aşağıdaki butona tıkladığınızda başvuru yapacağınız Google Form sayfasına yönlendirileceksiniz.",
-  button_text: "BAŞVURU FORMUNU AÇ"
-}
+    overline: "TR MOIC / 2026",
+    title: "BAŞVURU <em>SÜRECİ</em>",
+    subtitle: "Konferansımıza katılmak için lütfen aşağıdaki temel kuralları inceleyiniz ve ardından başvuru formuna ilerleyiniz.",
+    rules_reminder_title: "Önemli Kurallar & Hatırlatmalar",
+    cat1_title: "Genel Davranış Kuralları",
+    cat1_items: [
+      "Tüm katılımcılar saygılı ve yapıcı bir iletişim dili kullanmalıdır.",
+      "Hakaret, küçümseme veya ayrımcılık içeren davranışlar kabul edilmez.",
+      "Konferans ortamında disiplinli ve sorumluluk sahibi davranılmalıdır."
+    ],
+    cat2_title: "Komite Kuralları",
+    cat2_items: [
+      "Delegeler yalnızca temsil ettikleri ülke adına konuşmalıdır.",
+      "Komite başkanlarının yönlendirmelerine uyulması zorunludur.",
+      "Oturum düzenini bozacak davranışlardan kaçınılmalıdır."
+    ],
+    cta_title: "Başvuruya Hazır mısınız?",
+    cta_desc: "Aşağıdaki butona tıkladığınızda başvuru yapacağınız Google Form sayfasına yönlendirileceksiniz.",
+    button_text: "BAŞVURU FORMUNU AÇ"
+  },
+  committee_tr1: {
+    label: "1. Türkçe Komitesi",
+    title: "Dünyadaki Müslüman Azınlıkların Durumu",
+    about_label: "Komite Hakkında",
+    about_p1: "Dünyadaki Müslüman Azınlıklar Komitesi, küresel ölçekte Müslümanların azınlık statüsünde yaşadığı bölgelerde karşılaştıkları yapısal zorlukları, hak ihlallerini ve sosyo-kültürel sorunları ele almak ve bu sorunlara çözüm bulmak için kurulmuş bir komitedir. Bu komite, delegelerin günümüz dünyasının en hassas ve stratejik konularından biri olan azınlık hakları üzerinde derinlemesine analizler yapmaları ve anlamlı çözümler üretmeleri için kurulmuştur.",
+    about_p2: "Tarihsel süreçten günümüze kadar, Müslüman azınlıkların varlığı; siyasi baskılar, kimlik çatışmaları ve temel insan haklarına erişim kısıtlamaları gibi kalıcı ve artan engellerle karşı karşıya kalmıştır. Bu durum, sadece bireysel yaşamları değil, aynı zamanda küresel barış ve bir arada yaşama kültürünü de doğrudan etkileyen bir mesele haline gelmiştir.",
+    about_p3: "Bu komite bünyesinde delegelerden; Müslüman azınlıkların yaşadığı bölgelerdeki demografik, hukuki ve sosyal ve sistematik sorunlara karşı pratik ve uygulanabilir politikalar ile İİT Ülkeleri ile işbirliği içerisinde çözümler üretmeleri beklenmektedir. Dünyadaki Müslüman Azınlıklar Komitesi, yapıcı diyalog ve ortak akıl aracılığıyla, azınlık haklarının korunmasını teşvik etmeyi ve dünya çapında daha adil ve barışçıl toplumların inşasına katkı sağlamayı amaçlamaktadır.",
+    guide_label: "Çalışma Rehberi",
+    guide_title: "Study Guide",
+    guide_desc: "Komiteye hazırlanmak için hazırladığımız çalışma rehberini indirerek gündem maddeleri, arka plan bilgisi ve beklenen müzakere çerçevesi hakkında detaylı bilgiye ulaşabilirsiniz.",
+    guide_btn: "Study Guide İndir",
+  },
+  committee_tr2: {
+  label: "2. Türkçe Komitesi",
+  title: "İslami Sosyal İşler Komitesi",
+  about_label: "Komite Hakkında",
+  about_p1: "Fatih Model İslam İşbirliği Teşkilatı 2026 kapsamında faaliyetlerini yürüten İslami Sosyal İşler Komitesi, ümmetin karşı karşıya kaldığı mülteci krizini yalnızca teknik bir yönetişim sorunu değil, vicdani ve tarihi bir medeniyet sınavı olarak ele almaktadır. 57 üye devletin sosyal kararlarını şekillendiren komitemiz, mülteci kardeşlerimizi pasif yardım alıcıları olmaktan çıkarıp, kendi onurlarını inşa eden ve toplumda rol alan etkin aktörlere dönüştürmeyi esas alır.",
+  about_p2: "Komitenin çalışma sahası, kriz bölgelerinde sivil ölümlerini engellemekten kayıp nesillerin önüne geçecek stratejik eğitim hatları kurmaya kadar geniş bir yelpazeyi kapsamaktadır. Bu doğrultuda; blockchain tabanlı dijital kimlik projeleri, mülteci topluluklarını beşeri bir sermaye olarak gören yenilikçi ekonomik modeller ve teknoloji odaklı çözümler komitemizin öncelikli gündem maddelerini oluşturmaktadır.",
+  about_p3: "Temel gayemiz; Zekat, Sadaka ve Sukuk gibi İslami finans araçlarını sürdürülebilir kalkınmaya entegre ederek İslam dünyasındaki dayanışma ruhunu hukuk temelli çözümlerle birleştirmektir. 2030 vizyonu doğrultusunda, ümmetin hiçbir ferdini geride bırakmayan, adalet ve onur odaklı bir başarı öyküsü inşa etmeyi hedefliyoruz.",
+  guide_label: "Çalışma Rehberi",
+  guide_title: "Study Guide",
+  guide_desc: "Komiteye hazırlanmak için hazırladığımız çalışma rehberini indirerek gündem maddeleri, arka plan bilgisi ve beklenen müzakere çerçevesi hakkında detaylı bilgiye ulaşabilirsiniz.",
+  guide_btn: "Study Guide İndir",
+},
+  committee_ar1: {
+    label: "1. Arapça Komitesi",
+    title: "Siyonist İşgalin Genişlemesinin Önlenmesi ve İslam Dünyasının Önündeki Siyonist Engellerin Kaldırılması",
+    about_label: "Komite Hakkında",
+    about_p1: "İcra Komitesi, İslam dünyasının karşı karşıya olduğu siyasi ve stratejik meseleleri, başta Filistin davası ve buna bağlı siyasi, askeri ve insani zorlukları takip etmekle görevli temel komitelerden biridir. Komite, bölgenin güvenliğini ve istikrarını tehdit eden hayati konularda ortak bir duruş sergilemek amacıyla İslam İşbirliği Teşkilatı (İİT) üye devletleri arasındaki çabaları koordine etmek için çalışır.",
+    about_p2: "Bu komite, 1917 Balfour Deklarasyonu'ndan günümüze kadar Filistin topraklarını hedef alan yayılmacı politika ve uygulamaları; bunun sonucunda ortaya çıkan işgal, yasadışı yerleşim, zorla yerinden edilme ve uluslararası hukuk ile insan hakları ihlallerini ele alan “Siyonist Yayılmacılığın Önlenmesi” başlıklı gündem maddesini tartışacaktır.",
+    about_p3: "Komite, bu gündem maddesi aracılığıyla Siyonist yayılmacılığın nedenlerini ve mekanizmalarını incelemeyi, bunu sınırlandırmak için olası siyasi, diplomatik ve ekonomik araçları tartışmayı ve Filistin davasını desteklemek için işbirliğini güçlendirmeyi amaçlamaktadır. Ayrıca, işgalin ihlallerinden dolayı hesap vermesinde uluslararası örgütlerin rolünü tartışmayı, Filistin halkını korumak için pratik stratejiler sunmayı ve Orta Doğu'da güvenlik ile istikrarı garanti altına alan adil çözümlere ulaşmak için uluslararası diyaloğu teşvik etmeyi hedeflemektedir.",
+    guide_label: "Çalışma Rehberi",
+    guide_title: "Study Guide",
+    guide_desc: "Komiteye hazırlanmak için hazırladığımız çalışma rehberini indirerek gündem maddeleri, arka plan bilgisi ve beklenen müzakere çerçevesi hakkında detaylı bilgiye ulaşabilirsiniz.",
+    guide_btn: "Study Guide İndir",
+  },
+  committee_en1: {
+  label: "1. İngilizce Komitesi",
+  title: "İslamofobiye Karşı Sosyal Dayanıklılık",
+  about_label: "Komite Hakkında",
+  about_p1: "İslamofobiye Karşı Sosyal Dayanıklılık Komitesi (SRIC), dünya genelinde Müslüman toplulukların karşılaştığı zorlukları ve ayrımcılığı ele almaya adanmıştır. Delegelere, günümüzün en acil küresel sorunlarından biri olan İslamofobi üzerine anlamlı tartışmalar yürütmeleri için bir platform sunar.",
+  about_p2: "Yıllar içinde İslamofobi, özellikle Müslümanların azınlıkta olduğu bölgelerde kalıcı ve büyüyen bir endişe kaynağı olmaya devam etmiştir. Etkisi, dünya genelindeki bireylerin ve toplulukların sosyal, kültürel ve siyasi yaşamlarını etkilemeyi sürdürmektedir.",
+  about_p3: "Bu komite bünyesinde delegelerin İslamofobinin temel nedenlerini ve sonuçlarını eleştirel bir şekilde incelemeleri, aynı zamanda pratik ve uygulanabilir çözümler geliştirmek için iş birliği içinde çalışmaları beklenmektedir. Diyalog, iş birliği ve farklı bakış açıları aracılığıyla SRIC, anlayışı artırmayı ve daha kapsayıcı ve dayanıklı toplumların inşasına katkıda bulunmayı amaçlamaktadır.",
+  guide_label: "Çalışma Rehberi",
+  guide_title: "Study Guide",
+  guide_desc: "Komiteye hazırlanmak için hazırladığımız çalışma rehberini indirerek gündem maddeleri, arka plan bilgisi ve beklenen müzakere çerçevesi hakkında detaylı bilgiye ulaşabilirsiniz.",
+  guide_btn: "Study Guide İndir",
+},
+committee_en2: {
+  label: "2. İngilizce Komitesi",
+  title: "Dijital Gençlik Konseyi",
+  about_label: "Komite Hakkında",
+  about_p1: "Dijital Gençlik Konseyi (DYC) Komitesi, hızla ilerleyen dijital çağda gençlerin toplumsal sonuçları şekillendirmeleri için bir platform sunar. Dijital teknolojilerin iletişim, eğitim ve sosyal etkileşimi doğrudan etkilemesiyle gençler, pasif kullanıcılar olmaktan çıkıp temel paydaşlar konumuna gelmiştir. Küresel internet kullanıcı sayısının 5 milyarı aşması ve birçok bölgede 16-24 yaş arası gençlerin %90'ın üzerinde kullanım oranına sahip olması, onların dijital ortamlardaki merkezi rolünü doğrulamaktadır.",
+  about_p2: "Delegeler Müslüman gençleri temsil eder ve başta Yapay Zeka (AI) olmak üzere gelişen teknolojilerin gelişim, değerler, kimlik ve davranış üzerindeki etkilerini analiz ederler. Teknolojik sistemler ile dini kimlik arasındaki etkileşim, yapılandırılmış bir değerlendirme gerektiren ölçülebilir fırsatlar ve riskler yaratmaktadır.",
+  about_p3: "Komite, kültürel erozyon, etik çatışma ve davranışsal değişim gibi riskleri ele alırken; eğitimi, entelektüel gelişimi ve sosyal katılımı iyileştirmek için Yapay Zeka kullanımına odaklanır. Delegeler, teknolojik ilerlemeyi İslami ilkeler ve kültürel süreklilikle uyumlu hale getiren çözümler üretmelidir.",
+  guide_label: "Çalışma Rehberi",
+  guide_title: "Study Guide",
+  guide_desc: "Komiteye hazırlanmak için hazırladığımız çalışma rehberini indirerek gündem maddeleri, arka plan bilgisi ve beklenen müzakere çerçevesi hakkında detaylı bilgiye ulaşabilirsiniz.",
+  guide_btn: "Study Guide İndir",
+},
 
 }

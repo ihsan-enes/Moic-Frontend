@@ -37,8 +37,8 @@ export default {
     social: "SOCIAL MEDIA",
     copyright: "© 2026 TR MOIC. All rights reserved.",
     instagram: "Instagram",
-  email: "Email",
-  location: "Address",
+    email: "Email",
+    location: "Address",
     address: "Fatih, Istanbul, Turkiye"
   },
   iletisim: {
@@ -137,20 +137,20 @@ export default {
     header_desc: "The committees within TR MOIC are planned as academic sessions aiming to develop students' diplomacy, representation, and problem-solving skills.",
     list_title: "COMMITTEE LIST",
     list_desc: "TR MOIC committees aim to enable students to discuss international issues within an academic framework.",
-    c1_title: "Prevention of the Expansion of Zionist Occupation",
+    c1_title: "Prevention of the Expansion of Zionist Occupation and Removal of Zionist Obstacles Facing the Islamic World",
     c1_lang: "1st Arabic Committee",
-    
-    c2_title: "Prevention of the Expansion of Zionist Occupation",
-    c2_lang: "2nd Arabic Committee",
 
-    c3_title: "Digital Youth Council (DYC): Impacts of Artificial Intelligence on Muslim Youth",
-    c3_lang: "1st English Committee",
+    c2_title: "The Situation of Muslim Minorities in the World",
+    c2_lang: "1st Turkish Committee",
 
-    c4_title: "Digital Youth Council (DYC): Impacts of Artificial Intelligence on Muslim Youth",
-    c4_lang: "2nd English Committee",
+    c3_title: "Islamic Social Affairs Committee",
+    c3_lang: "2nd Turkish Committee",
 
-    c5_title: "Situation of Muslim Minorities in the World (DMAD)",
-    c5_lang: "1st Turkish Committee",
+    c4_title: "Social Resilience Against Islamophobia",
+    c4_lang: "1st English Committee",
+
+    c5_title: "Digital Youth Council",
+    c5_lang: "2nd English Committee",
     director: "Director"
   },
   ufsm: {
@@ -251,25 +251,85 @@ export default {
     error: "Unable to load team information at the moment."
   },
   apply: {
-  overline: "TR MOIC / 2026",
-  title: "APPLICATION <em>PROCESS</em>",
-  subtitle: "To participate in our conference, please review the basic rules below and then proceed to the application form.",
-  rules_reminder_title: "Important Rules & Reminders",
-  cat1_title: "General Code of Conduct",
-  cat1_items: [
-    "All participants must use respectful and constructive language.",
-    "Behaviors involving insults or discrimination are not accepted.",
-    "Discipline and responsibility must be maintained at all times."
-  ],
-  cat2_title: "Committee Rules",
-  cat2_items: [
-    "Delegates must only speak on behalf of the country they represent.",
-    "Compliance with committee chairs' instructions is mandatory.",
-    "Behaviors that disrupt the session order must be avoided."
-  ],
-  cta_title: "Ready to Apply?",
-  cta_desc: "By clicking the button below, you will be redirected to the Google Form application page.",
-  button_text: "OPEN APPLICATION FORM"
-}
+    overline: "TR MOIC / 2026",
+    title: "APPLICATION <em>PROCESS</em>",
+    subtitle: "To participate in our conference, please review the basic rules below and then proceed to the application form.",
+    rules_reminder_title: "Important Rules & Reminders",
+    cat1_title: "General Code of Conduct",
+    cat1_items: [
+      "All participants must use respectful and constructive language.",
+      "Behaviors involving insults or discrimination are not accepted.",
+      "Discipline and responsibility must be maintained at all times."
+    ],
+    cat2_title: "Committee Rules",
+    cat2_items: [
+      "Delegates must only speak on behalf of the country they represent.",
+      "Compliance with committee chairs' instructions is mandatory.",
+      "Behaviors that disrupt the session order must be avoided."
+    ],
+    cta_title: "Ready to Apply?",
+    cta_desc: "By clicking the button below, you will be redirected to the Google Form application page.",
+    button_text: "OPEN APPLICATION FORM"
+  },
+  committee_tr1: {
+    label: "1st Turkish Committee",
+    title: "The Situation of Muslim Minorities in the World",
+    about_label: "About the Committee",
+    about_p1: "The Committee on Muslim Minorities in the World is established to address the structural challenges, rights violations, and socio-cultural issues faced by Muslim communities living in minority status across the globe, and to develop solutions to these problems. This committee is founded to enable delegates to conduct in-depth analyses and produce meaningful solutions on minority rights — one of the most sensitive and strategic issues of the contemporary world.",
+    about_p2: "From a historical perspective to the present day, the existence of Muslim minorities has faced persistent and growing obstacles such as political pressures, identity conflicts, and restrictions on access to fundamental human rights. This situation has become an issue that directly affects not only individual lives but also global peace and the culture of coexistence.",
+    about_p3: "Within this committee, delegates are expected to develop practical and applicable policies against the demographic, legal, social, and systemic challenges in regions where Muslim minorities reside, and to produce solutions in cooperation with OIC member states. The Committee on Muslim Minorities in the World aims to promote the protection of minority rights through constructive dialogue and collective reasoning, and to contribute to the building of more just and peaceful societies worldwide.",
+    guide_label: "Study Guide",
+    guide_title: "Study Guide",
+    guide_desc: "Download the study guide we have prepared to help you get ready for the committee. It includes detailed information on agenda items, background knowledge, and the expected framework for debate.",
+    guide_btn: "Download Study Guide",
+  },
+  committee_tr2: {
+    label: "2. Turkish Committee",
+    title: "Islamic Social Affairs Committee",
+    about_label: "About the Committee",
+    about_p1: "Operating within Fatih Model OIC 2026, the Islamic Social Affairs Committee approaches the refugee crisis not merely as a technical governance issue, but as a conscientious and historical test of civilization. Shaping the social policies of 57 member states, our committee aims to transform refugees from passive recipients of aid into active participants who build their own dignity and play key roles in social reconstruction.",
+    about_p2: "The scope of the committee ranges from preventing civilian casualties in conflict zones to establishing strategic educational pathways to save lost generations. In this context, blockchain-based digital identity projects, innovative economic models that view refugee communities as human capital, and technology-driven solutions constitute our primary agenda.",
+    about_p3: "Our core mission is to integrate Islamic financial tools such as Zakat, Sadaqa, and Sukuk into sustainable development, combining the spirit of solidarity with law-based solutions. In line with the 2030 vision, we strive to build a success story focused on justice and dignity, ensuring that no member of the Ummah is left behind.",
+    guide_label: "Study Guide",
+    guide_title: "Study Guide",
+    guide_desc: "To prepare for the committee, download our study guide for detailed information on agenda items, background, and the expected negotiation framework.",
+    guide_btn: "Download Study Guide",
+  },
+  committee_ar1: {
+    label: "1. Arabic Committee",
+    title: "Prevention of the Expansion of Zionist Occupation and Removal of Zionist Obstacles Facing the Islamic World",
+    about_label: "About the Committee",
+    about_p1: "The Executive Committee is one of the primary committees dedicated to following up on the political and strategic issues facing the Islamic world, foremost among them the Palestinian cause and its associated political, military, and humanitarian challenges. The Committee works to coordinate efforts among member states within the Organization of Islamic Cooperation (OIC) to adopt unified positions on critical issues that threaten the security and stability of the region.",
+    about_p2: "This council discusses the agenda item titled 'How to Prevent Zionist Expansion', which addresses the expansionist policies and practices that have targeted Palestinian lands from the 1917 Balfour Declaration to the present day, along with the resulting occupation, settlement, displacement, and violations of international law and human rights.",
+    about_p3: "Through this agenda item, the Committee aims to study the causes and mechanisms of Zionist expansion, explore political, diplomatic, and economic means to limit it, and enhance cooperation to support the Palestinian cause. It also seeks to discuss the role of international organizations in holding the occupation accountable, provide practical strategies to protect the Palestinian people, and encourage international dialogue to reach just solutions that ensure security and stability in the Middle East.",
+    guide_label: "Study Guide",
+    guide_title: "Study Guide",
+    guide_desc: "To prepare for the committee, you can download our study guide to get detailed information about the agenda items, background information, and the expected negotiation framework.",
+    guide_btn: "Download Study Guide",
+  },
+  committee_en1: {
+    label: "1. English Committee",
+    title: "Social Resilience Against Islamophobia",
+    about_label: "About the Committee",
+    about_p1: "The Social Resilience Against Islamophobia Committee (SRIC) is dedicated to addressing the challenges and discrimination faced by Muslim communities worldwide. It provides a platform for delegates to engage in meaningful discussions on one of the most pressing global issues—Islamophobia.",
+    about_p2: "Over the years, Islamophobia has remained a persistent and growing concern, particularly in regions where Muslims are a minority. Its impact continues to affect the social, cultural, and political lives of individuals and communities across the world.",
+    about_p3: "Within this committee, delegates are expected to critically examine the root causes and consequences of Islamophobia, while working collaboratively to develop practical and implementable solutions. Through dialogue, cooperation, and diverse perspectives, SRIC aims to promote understanding and contribute to building more inclusive and resilient societies.",
+    guide_label: "Study Guide",
+    guide_title: "Study Guide",
+    guide_desc: "To prepare for the committee, you can download our study guide to get detailed information about the agenda items, background information, and the expected negotiation framework.",
+    guide_btn: "Download Study Guide",
+  },
+  committee_en2: {
+    label: "2. English Committee",
+    title: "Digital Youth Council",
+    about_label: "About the Committee",
+    about_p1: "The Digital Youth Council (DYC) Committee provides a platform for youth to shape societal outcomes in a rapidly advancing digital era. Digital technologies now directly influence communication, education, and social interaction, positioning youth as primary stakeholders rather than passive users. Global internet users exceed 5 billion, with youth aged 16–24 showing usage rates above 90% in many regions, confirming their central role in digital environments.",
+    about_p2: "Delegates represent Muslim youth and analyze how emerging technologies, especially Artificial Intelligence (AI), affect development, values, identity, and behavior. The interaction between technological systems and religious identity creates measurable opportunities and risks that require structured evaluation.",
+    about_p3: "The committee focuses on applying AI to improve education, intellectual growth, and social participation while addressing risks such as cultural erosion, ethical conflict, and behavioral change. Delegates must produce solutions that align technological advancement with Islamic principles and cultural continuity.",
+    guide_label: "Study Guide",
+    guide_title: "Study Guide",
+    guide_desc: "To prepare for the committee, you can download our study guide to get detailed information about the agenda items, background information, and the expected negotiation framework.",
+    guide_btn: "Download Study Guide",
+  },
 
 };
