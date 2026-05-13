@@ -47,7 +47,12 @@ export default {
       title: "PROGRAM AKIŞI",
       desc: "Konferans süresince gerçekleşecek oturumlar, aralar ve temel etkinlik akışı aşağıda yer almaktadır."
     },
-    gun: "GÜN"
+    gun: "GÜN",
+    orgPdf: {
+      title: "Organizasyon Dökümanı",
+      desc: "Konferans organizasyon dökümanını indirmek için aşağıdaki butonu kullanabilirsiniz.",
+      btn: "Dökümanı İndir"
+    }
   },
   iletisim: {
     sidebar: {
@@ -215,7 +220,9 @@ export default {
     note: {
       title: "ÖNEMLİ NOT",
       desc: "Organizasyon, gerekli gördüğü durumlarda kurallar üzerinde değişiklik yapma hakkını saklı tutar. Güncel bilgiler konferans öncesinde paylaşılacaktır."
-    }
+    },
+    studyGuides: "Çalışma Rehberleri",
+    studyGuidesDesc: "Komite çalışma rehberlerini indirmek için aşağıdaki butonları kullanabilirsiniz."
   },
   sponsors: {
     header: {
@@ -285,17 +292,17 @@ export default {
     guide_btn: "Study Guide İndir",
   },
   committee_tr2: {
-  label: "2. Türkçe Komitesi",
-  title: "İslami Sosyal İşler Komitesi",
-  about_label: "Komite Hakkında",
-  about_p1: "Fatih Model İslam İşbirliği Teşkilatı 2026 kapsamında faaliyetlerini yürüten İslami Sosyal İşler Komitesi, ümmetin karşı karşıya kaldığı mülteci krizini yalnızca teknik bir yönetişim sorunu değil, vicdani ve tarihi bir medeniyet sınavı olarak ele almaktadır. 57 üye devletin sosyal kararlarını şekillendiren komitemiz, mülteci kardeşlerimizi pasif yardım alıcıları olmaktan çıkarıp, kendi onurlarını inşa eden ve toplumda rol alan etkin aktörlere dönüştürmeyi esas alır.",
-  about_p2: "Komitenin çalışma sahası, kriz bölgelerinde sivil ölümlerini engellemekten kayıp nesillerin önüne geçecek stratejik eğitim hatları kurmaya kadar geniş bir yelpazeyi kapsamaktadır. Bu doğrultuda; blockchain tabanlı dijital kimlik projeleri, mülteci topluluklarını beşeri bir sermaye olarak gören yenilikçi ekonomik modeller ve teknoloji odaklı çözümler komitemizin öncelikli gündem maddelerini oluşturmaktadır.",
-  about_p3: "Temel gayemiz; Zekat, Sadaka ve Sukuk gibi İslami finans araçlarını sürdürülebilir kalkınmaya entegre ederek İslam dünyasındaki dayanışma ruhunu hukuk temelli çözümlerle birleştirmektir. 2030 vizyonu doğrultusunda, ümmetin hiçbir ferdini geride bırakmayan, adalet ve onur odaklı bir başarı öyküsü inşa etmeyi hedefliyoruz.",
-  guide_label: "Çalışma Rehberi",
-  guide_title: "Study Guide",
-  guide_desc: "Komiteye hazırlanmak için hazırladığımız çalışma rehberini indirerek gündem maddeleri, arka plan bilgisi ve beklenen müzakere çerçevesi hakkında detaylı bilgiye ulaşabilirsiniz.",
-  guide_btn: "Study Guide İndir",
-},
+    label: "2. Türkçe Komitesi",
+    title: "İslami Sosyal İşler Komitesi",
+    about_label: "Komite Hakkında",
+    about_p1: "Fatih Model İslam İşbirliği Teşkilatı 2026 kapsamında faaliyetlerini yürüten İslami Sosyal İşler Komitesi, ümmetin karşı karşıya kaldığı mülteci krizini yalnızca teknik bir yönetişim sorunu değil, vicdani ve tarihi bir medeniyet sınavı olarak ele almaktadır. 57 üye devletin sosyal kararlarını şekillendiren komitemiz, mülteci kardeşlerimizi pasif yardım alıcıları olmaktan çıkarıp, kendi onurlarını inşa eden ve toplumda rol alan etkin aktörlere dönüştürmeyi esas alır.",
+    about_p2: "Komitenin çalışma sahası, kriz bölgelerinde sivil ölümlerini engellemekten kayıp nesillerin önüne geçecek stratejik eğitim hatları kurmaya kadar geniş bir yelpazeyi kapsamaktadır. Bu doğrultuda; blockchain tabanlı dijital kimlik projeleri, mülteci topluluklarını beşeri bir sermaye olarak gören yenilikçi ekonomik modeller ve teknoloji odaklı çözümler komitemizin öncelikli gündem maddelerini oluşturmaktadır.",
+    about_p3: "Temel gayemiz; Zekat, Sadaka ve Sukuk gibi İslami finans araçlarını sürdürülebilir kalkınmaya entegre ederek İslam dünyasındaki dayanışma ruhunu hukuk temelli çözümlerle birleştirmektir. 2030 vizyonu doğrultusunda, ümmetin hiçbir ferdini geride bırakmayan, adalet ve onur odaklı bir başarı öyküsü inşa etmeyi hedefliyoruz.",
+    guide_label: "Çalışma Rehberi",
+    guide_title: "Study Guide",
+    guide_desc: "Komiteye hazırlanmak için hazırladığımız çalışma rehberini indirerek gündem maddeleri, arka plan bilgisi ve beklenen müzakere çerçevesi hakkında detaylı bilgiye ulaşabilirsiniz.",
+    guide_btn: "Study Guide İndir",
+  },
   committee_ar1: {
     label: "1. Arapça Komitesi",
     title: "Siyonist İşgalin Genişlemesinin Önlenmesi ve İslam Dünyasının Önündeki Siyonist Engellerin Kaldırılması",
@@ -309,28 +316,28 @@ export default {
     guide_btn: "Study Guide İndir",
   },
   committee_en1: {
-  label: "1. İngilizce Komitesi",
-  title: "İslamofobiye Karşı Sosyal Dayanıklılık",
-  about_label: "Komite Hakkında",
-  about_p1: "İslamofobiye Karşı Sosyal Dayanıklılık Komitesi (SRIC), dünya genelinde Müslüman toplulukların karşılaştığı zorlukları ve ayrımcılığı ele almaya adanmıştır. Delegelere, günümüzün en acil küresel sorunlarından biri olan İslamofobi üzerine anlamlı tartışmalar yürütmeleri için bir platform sunar.",
-  about_p2: "Yıllar içinde İslamofobi, özellikle Müslümanların azınlıkta olduğu bölgelerde kalıcı ve büyüyen bir endişe kaynağı olmaya devam etmiştir. Etkisi, dünya genelindeki bireylerin ve toplulukların sosyal, kültürel ve siyasi yaşamlarını etkilemeyi sürdürmektedir.",
-  about_p3: "Bu komite bünyesinde delegelerin İslamofobinin temel nedenlerini ve sonuçlarını eleştirel bir şekilde incelemeleri, aynı zamanda pratik ve uygulanabilir çözümler geliştirmek için iş birliği içinde çalışmaları beklenmektedir. Diyalog, iş birliği ve farklı bakış açıları aracılığıyla SRIC, anlayışı artırmayı ve daha kapsayıcı ve dayanıklı toplumların inşasına katkıda bulunmayı amaçlamaktadır.",
-  guide_label: "Çalışma Rehberi",
-  guide_title: "Study Guide",
-  guide_desc: "Komiteye hazırlanmak için hazırladığımız çalışma rehberini indirerek gündem maddeleri, arka plan bilgisi ve beklenen müzakere çerçevesi hakkında detaylı bilgiye ulaşabilirsiniz.",
-  guide_btn: "Study Guide İndir",
-},
-committee_en2: {
-  label: "2. İngilizce Komitesi",
-  title: "Dijital Gençlik Konseyi",
-  about_label: "Komite Hakkında",
-  about_p1: "Dijital Gençlik Konseyi (DYC) Komitesi, hızla ilerleyen dijital çağda gençlerin toplumsal sonuçları şekillendirmeleri için bir platform sunar. Dijital teknolojilerin iletişim, eğitim ve sosyal etkileşimi doğrudan etkilemesiyle gençler, pasif kullanıcılar olmaktan çıkıp temel paydaşlar konumuna gelmiştir. Küresel internet kullanıcı sayısının 5 milyarı aşması ve birçok bölgede 16-24 yaş arası gençlerin %90'ın üzerinde kullanım oranına sahip olması, onların dijital ortamlardaki merkezi rolünü doğrulamaktadır.",
-  about_p2: "Delegeler Müslüman gençleri temsil eder ve başta Yapay Zeka (AI) olmak üzere gelişen teknolojilerin gelişim, değerler, kimlik ve davranış üzerindeki etkilerini analiz ederler. Teknolojik sistemler ile dini kimlik arasındaki etkileşim, yapılandırılmış bir değerlendirme gerektiren ölçülebilir fırsatlar ve riskler yaratmaktadır.",
-  about_p3: "Komite, kültürel erozyon, etik çatışma ve davranışsal değişim gibi riskleri ele alırken; eğitimi, entelektüel gelişimi ve sosyal katılımı iyileştirmek için Yapay Zeka kullanımına odaklanır. Delegeler, teknolojik ilerlemeyi İslami ilkeler ve kültürel süreklilikle uyumlu hale getiren çözümler üretmelidir.",
-  guide_label: "Çalışma Rehberi",
-  guide_title: "Study Guide",
-  guide_desc: "Komiteye hazırlanmak için hazırladığımız çalışma rehberini indirerek gündem maddeleri, arka plan bilgisi ve beklenen müzakere çerçevesi hakkında detaylı bilgiye ulaşabilirsiniz.",
-  guide_btn: "Study Guide İndir",
-},
+    label: "1. İngilizce Komitesi",
+    title: "İslamofobiye Karşı Sosyal Dayanıklılık",
+    about_label: "Komite Hakkında",
+    about_p1: "İslamofobiye Karşı Sosyal Dayanıklılık Komitesi (SRIC), dünya genelinde Müslüman toplulukların karşılaştığı zorlukları ve ayrımcılığı ele almaya adanmıştır. Delegelere, günümüzün en acil küresel sorunlarından biri olan İslamofobi üzerine anlamlı tartışmalar yürütmeleri için bir platform sunar.",
+    about_p2: "Yıllar içinde İslamofobi, özellikle Müslümanların azınlıkta olduğu bölgelerde kalıcı ve büyüyen bir endişe kaynağı olmaya devam etmiştir. Etkisi, dünya genelindeki bireylerin ve toplulukların sosyal, kültürel ve siyasi yaşamlarını etkilemeyi sürdürmektedir.",
+    about_p3: "Bu komite bünyesinde delegelerin İslamofobinin temel nedenlerini ve sonuçlarını eleştirel bir şekilde incelemeleri, aynı zamanda pratik ve uygulanabilir çözümler geliştirmek için iş birliği içinde çalışmaları beklenmektedir. Diyalog, iş birliği ve farklı bakış açıları aracılığıyla SRIC, anlayışı artırmayı ve daha kapsayıcı ve dayanıklı toplumların inşasına katkıda bulunmayı amaçlamaktadır.",
+    guide_label: "Çalışma Rehberi",
+    guide_title: "Study Guide",
+    guide_desc: "Komiteye hazırlanmak için hazırladığımız çalışma rehberini indirerek gündem maddeleri, arka plan bilgisi ve beklenen müzakere çerçevesi hakkında detaylı bilgiye ulaşabilirsiniz.",
+    guide_btn: "Study Guide İndir",
+  },
+  committee_en2: {
+    label: "2. İngilizce Komitesi",
+    title: "Dijital Gençlik Konseyi",
+    about_label: "Komite Hakkında",
+    about_p1: "Dijital Gençlik Konseyi (DYC) Komitesi, hızla ilerleyen dijital çağda gençlerin toplumsal sonuçları şekillendirmeleri için bir platform sunar. Dijital teknolojilerin iletişim, eğitim ve sosyal etkileşimi doğrudan etkilemesiyle gençler, pasif kullanıcılar olmaktan çıkıp temel paydaşlar konumuna gelmiştir. Küresel internet kullanıcı sayısının 5 milyarı aşması ve birçok bölgede 16-24 yaş arası gençlerin %90'ın üzerinde kullanım oranına sahip olması, onların dijital ortamlardaki merkezi rolünü doğrulamaktadır.",
+    about_p2: "Delegeler Müslüman gençleri temsil eder ve başta Yapay Zeka (AI) olmak üzere gelişen teknolojilerin gelişim, değerler, kimlik ve davranış üzerindeki etkilerini analiz ederler. Teknolojik sistemler ile dini kimlik arasındaki etkileşim, yapılandırılmış bir değerlendirme gerektiren ölçülebilir fırsatlar ve riskler yaratmaktadır.",
+    about_p3: "Komite, kültürel erozyon, etik çatışma ve davranışsal değişim gibi riskleri ele alırken; eğitimi, entelektüel gelişimi ve sosyal katılımı iyileştirmek için Yapay Zeka kullanımına odaklanır. Delegeler, teknolojik ilerlemeyi İslami ilkeler ve kültürel süreklilikle uyumlu hale getiren çözümler üretmelidir.",
+    guide_label: "Çalışma Rehberi",
+    guide_title: "Study Guide",
+    guide_desc: "Komiteye hazırlanmak için hazırladığımız çalışma rehberini indirerek gündem maddeleri, arka plan bilgisi ve beklenen müzakere çerçevesi hakkında detaylı bilgiye ulaşabilirsiniz.",
+    guide_btn: "Study Guide İndir",
+  },
 
 }

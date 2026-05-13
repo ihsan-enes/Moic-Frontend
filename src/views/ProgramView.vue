@@ -20,7 +20,7 @@
         <div v-else v-for="day in programData" :key="day.id" class="mb-6">
             <v-card class="timeline-card rounded-xl mx-auto pa-6" max-width="800">
                 <span class="text-overline gold-text mb-1 d-block" style="font-size: 1.2rem !important">
-                    {{ day.dayNumber }}.{{ $t("program.gun")}}
+                    {{ day.dayNumber }}.{{ $t("program.gun") }}
                 </span>
 
                 <h2 class="day-title mb-4">
@@ -46,13 +46,21 @@
             </v-card>
         </div>
     </v-container>
+    <div class="text-center mx-auto mt-6 mb-8" style="max-width: 800px">
+        <p class="event-info text-grey-darken-1 mb-4">{{ $t("program.orgPdf.desc") }}</p>
+        <v-btn href="/organizasyon-pdf.pdf" target="_blank" download class="org-btn" variant="elevated"
+            prepend-icon="mdi-download">
+            {{ $t("program.orgPdf.btn") }}
+        </v-btn>
+    </div>
+    <AppFooter></AppFooter>
     <AppFooter></AppFooter>
 </template>
 
 <script>
 import AppFooter from "@/components/AppFooter.vue";
 import AppNavbar from "@/components/AppNavbar.vue";
-import instance from "@/service/Api"; // Senin kurduğun normal instance
+import instance from "@/service/Api";
 
 export default {
     components: {
@@ -102,6 +110,21 @@ export default {
 
 .header-card {
     background: linear-gradient(135deg, #000814 0%, #024c6f 100%) !important;
+}
+
+
+.org-btn {
+  min-width: 280px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background: #001d3d !important;
+  color: #d4a017 !important;
+  
+  transition: all 0.25s ease !important;
+}
+.org-btn:hover {
+  background: #d4a017 !important;
+  color: #001d3d !important;
 }
 
 .main-program-title {

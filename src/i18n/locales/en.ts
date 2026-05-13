@@ -76,7 +76,12 @@ export default {
       title: "CONFERENCE SCHEDULE",
       desc: "The flow of sessions, breaks, and main events to be held during the conference is provided below."
     },
-    gun: "DAY"
+    gun: "DAY",
+    orgPdf: {
+      title: "Organization Document",
+      desc: "You can use the button below to download the conference organization document.",
+      btn: "Download Document"
+    }
   },
   basvuru: {
     header: {
@@ -214,7 +219,9 @@ export default {
     note: {
       title: "IMPORTANT NOTE",
       desc: "The organization reserves the right to make changes to the rules when necessary. Updated information will be shared before the conference."
-    }
+    },
+    studyGuides: "Study Guides",
+    studyGuidesDesc: "You can use the buttons below to download the committee study guides."
   },
   sponsors: {
     header: {
