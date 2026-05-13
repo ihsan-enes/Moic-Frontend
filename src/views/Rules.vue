@@ -27,21 +27,21 @@
       <p class="rules-desc text-grey-darken-1 mb-6">{{ $t("rules.studyGuidesDesc") }}</p>
       <v-row justify="center" class="ga-3">
         <v-col cols="12" sm="auto">
-          <v-btn href="/guides/study-guid-tr.pdf" target="_blank" download variant="elevated" prepend-icon="mdi-file-pdf-box"
+          <v-btn href="/guides/Terms&Rules-tr.pdf" target="_blank" download variant="elevated" prepend-icon="mdi-file-pdf-box"
             class="study-btn study-btn-gold">
-            Study Guide (TR)
+            Şartlar & Kurallar (TR)
           </v-btn>
         </v-col>
         <v-col cols="12" sm="auto">
-          <v-btn href="/guides/study-guid-en.pdf" target="_blank" download variant="elevated" prepend-icon="mdi-file-pdf-box"
+          <v-btn href="/guides/Terms&Rules-en.pdf" target="_blank" download variant="elevated" prepend-icon="mdi-file-pdf-box"
             class="study-btn study-btn-navy">
-            Study Guide (EN)
+            Terms & Rules (EN)
           </v-btn>
         </v-col>
         <v-col cols="12" sm="auto">
-          <v-btn href="/guides/study-guid-ar.pdf" target="_blank" download variant="elevated" prepend-icon="mdi-file-pdf-box"
+          <v-btn href="/guides/Terms&Rules-ar.pdf" target="_blank" download variant="elevated" prepend-icon="mdi-file-pdf-box"
             class="study-btn study-btn-gold">
-            Study Guide (AR)
+           الشروط والقواعد  (AR)
           </v-btn>
         </v-col>
       </v-row>

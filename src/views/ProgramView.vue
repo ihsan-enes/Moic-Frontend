@@ -48,7 +48,7 @@
     </v-container>
     <div class="text-center mx-auto mt-6 mb-8" style="max-width: 800px">
         <p class="event-info text-grey-darken-1 mb-4">{{ $t("program.orgPdf.desc") }}</p>
-        <v-btn href="/guides/organizasyon-pdf.pdf" target="_blank" download class="org-btn" variant="elevated"
+        <v-btn href="/guides/organization-document.pdf" target="_blank" download class="org-btn" variant="elevated"
             prepend-icon="mdi-download">
             {{ $t("program.orgPdf.btn") }}
         </v-btn>

@@ -220,8 +220,8 @@ export default {
       title: "IMPORTANT NOTE",
       desc: "The organization reserves the right to make changes to the rules when necessary. Updated information will be shared before the conference."
     },
-    studyGuides: "Study Guides",
-    studyGuidesDesc: "You can use the buttons below to download the committee study guides."
+    studyGuides: "Details for Rules and Terms",
+    studyGuidesDesc: "You can use the button below to download the PDF file for detailed information regarding the conference rules, participation terms, and procedures."
   },
   sponsors: {
     header: {

@@ -221,8 +221,8 @@ export default {
       title: "ÖNEMLİ NOT",
       desc: "Organizasyon, gerekli gördüğü durumlarda kurallar üzerinde değişiklik yapma hakkını saklı tutar. Güncel bilgiler konferans öncesinde paylaşılacaktır."
     },
-    studyGuides: "Çalışma Rehberleri",
-    studyGuidesDesc: "Komite çalışma rehberlerini indirmek için aşağıdaki butonları kullanabilirsiniz."
+    studyGuides: "Şartlar ve Kurallar için Detay",
+    studyGuidesDesc: "Konferans kuralları, katılım şartları ve prosedürler hakkında detaylı bilgi edinmek için aşağıdaki butonu kullanarak PDF dosyasını indirebilirsiniz."
   },
   sponsors: {
     header: {
